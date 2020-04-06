@@ -349,38 +349,35 @@ You MUST see at least these peers to verify you are connected to the Historia IP
 
 Nginx Web Proxy
 ================
-To install nginx/Windows, download the latest mainline version distribution (1.17.9), since the mainline branch of nginx contains all known fixes. Then unpack the distribution, go to the nginx-1.17.9 directory, and run nginx. Here is an example for the drive C: root directory:  ::
+To install nginx/Windows, download the latest mainline version distribution (currently 1.17.9) from  http://nginx.org/en/download.html 
 
-   http://nginx.org/en/download.html
-   cd c:\
-   unzip nginx-1.17.9.zip
-   cd nginx-1.17.9
-   start nginx
+After you have downloaded Nginx, find the file in explorer and open the file. Copy the root directory (nginx-1.17.9) of the archive to  C:\\. Note you can run this from anywhere, we are using this location for this example. 
+
+After this we will open a command prompt and start the nginx webserver command  ::
+
+
+   cd c:\nginx-1.17.9
+   start nginx.exe
 
 Go to the ip address of your VPS in a web browser to verify that Nginix is running. If you are running from your home network for now you can go to 127.0.0.1 in a web browser.
 
 Install SSL Certificate
 ================
-In this example we will be using the free SSL certificate service win-acme to create and install our SSL certificate. First we must install the ACMEv2: ::
+In this example we will be using the free SSL certificate service win-acme to create and install our SSL certificate. First we must download and install the ACMEv2. In your web browser go to and download the latest version from https://www.win-acme.com/ ::
 
-   https://www.win-acme.com/
-   
-   https://github.com/win-acme/win-acme/releases/download/v2.1.5/win-acme.v2.1.5.742.x64.pluggable.zip
-   
-   Follow Instruction here :
-   
-   https://www.win-acme.com/manual/advanced-use/examples/apache
+Next we need to prepare Nginx configuration file for ACMEv2. If you’re using the default location from above, the configuration file will be found at C:\\nginx-1.17.9\\conf\\nginx.conf  
 
-Next we need to prepare Nginx configuration file for ACMEv2. If you’re using the default configuration file /nginx/sites-available/default open it with a text editor such as notepad and find the server_name directive. Replace the underscore, _, with your own domain name(s). 
+Open the Nginx configuration file with a text editor such as notepad and find the server_name directive. Replace "localhost", with your own A record domain name, that you have setup from above.  
+
 After editing the configuration file, the server_name directive should look as follows. In this example, we assume that your domain is example.com and that you’re requesting a certificate for example.com. Make sure to use your own domain name here: ::
 
    server_name example.com;
 
-Save the file and restart Nginx:::
+Save the file and restart Nginx to verify it comes up properly again: ::
 
-   Nginx –s reload
+   nginx.exe –s reload
 
-Lets finish this process and setup Nginix to point to the IPFS daemon that is running on your masternode. If you’re using the default configuration file /etc/nginx/sites-available/default open it with a text editor such as notepad again.
+Lets finish this process and setup Nginix to point to the IPFS daemon that is running on your masternode. If you’re using the default location from above, the configuration file will be found at C:\\nginx-1.17.9\\conf\\nginx.conf   open it with a text editor such as notepad again.
 Change your nginx configuration file to look something like this: ::
 
    http {
@@ -391,7 +388,7 @@ Change your nginx configuration file to look something like this: ::
 
     server {
         listen       80;
-        server_name  mn165.peopleland.net;
+        server_name  example.com;
         location / {
                proxy_pass http://127.0.0.1:8080;
                proxy_set_header Host $host;
