@@ -83,30 +83,32 @@ Setup Firewall
 To make communication possible you need to allow following TCP ports through your firewall.
 
 .. figure:: /masternodes/img/firewall-1-2-3.png
+   :width: 300px
    
 .. figure:: /masternodes/img/firewall-4-5.png
-      
+   :width: 300px
+   
 .. figure:: /masternodes/img/firewall-6-7.png
+   :width: 300px
    
 .. figure:: /masternodes/img/firewall-8-9.png
+   :width: 300px   
    
-   
-[ Optional Recommendation : add 8GB to your windows virtual memory ]
 
 Setup Domain Name System (DNS) A Record
 ===============================
 Historia requires a DNS name set to enabled SSL for your IPFS node that will be setup below. This is beyond the scope of this document, but there is plenty of documentation online on how to do this. Find a cheap DNS registrar and create a A record that points to the IP address of your VPS. Namecheap.com or GoDaddy.com are options for this. This can be any top level domain, such as .xyz ($0.88 annually) or .fun ($1.00 annually), so get this cheapest domain you can get.
-Remember that if you live in a oppressive country, your name will be associated with your DNS record in the global WHOIS database. Some DNS providers such as ionos.com will give a DNS name privacy for free with domain registration. But they would still be required to hand over your domain name information via court order. Another option is using one of the new blockchain DNS systems such as unstoppabledomains.com, and using crypto currency to purchase your domain name. However we have not tested using a blockchain DNS system yet.
+Remember that if you live in a oppressive country, your name will be associated with your DNS record in the global WHOIS database. Some DNS providers such as ionos.com will give a DNS name privacy for free with domain registration. But they would still be required to hand over your domain name information via court order. Another option is using one of the new blockchain DNS systems such as unstoppabledomains.com and using crypto currency to purchase your domain name. However we have not tested using a blockchain DNS system yet.
 
 Option 1: A Record – NS Zone
 ----------------
 .. figure:: /masternodes/img/Domain-NS_Zone.png
-
+   :width: 300px
 
 Option 2: Child Name – Domain Panel
 ----------------
 .. figure:: /masternodes/img/Domain-child.png
-
+   :width: 300px
 
 
 Install Historia Windows Wallet
