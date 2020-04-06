@@ -48,28 +48,35 @@ Select a location for your new server on the following screen.
    :width: 300px
    
 Select Windows as the server type.
+
 .. figure:: /masternodes/img/server-type1.png
    :width: 300px
    
 Select a server size offering at least 2GB of memory.
+
 .. figure:: /masternodes/img/server-type2.png
    :width: 300px 
    
 Enter a hostname and label for your server. In this example we will use htamn01 as the hostname.
+
 .. figure:: /masternodes/img/server-name.png
-   :width: 300p
+   :width: 300px
    
 Add IPv6 for your server. IPv6 isn’t required but nice to have.
+
 .. figure:: /masternodes/img/server-ipv6.png
-   :width: 300p
+   :width: 300px
    
 Vultr will now install your server. This process may take a few minutes.
 .. figure:: /masternodes/img/server-location.png
-   :width: 300p
+   :width: 300px
    
 Click Manage when installation is complete and take note of the IPv4 address, username and password.
+
 .. figure:: /masternodes/img/server-management.png
-   
+   :width: 300px  
+
+
 Setup Firewall 
 ===============================
 To make communication possible you need to allow following TCP ports through your firewall.
