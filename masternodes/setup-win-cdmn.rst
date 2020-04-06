@@ -30,7 +30,7 @@ Masternode Info
 - Collateral Requirement: 5000 HTA
 - Reward: 32% per block - increaes 2.5% every 2 months until 50% per block
 - Ports: TCP 10101, TCP 4001, TCP 443
-- Nginx or any SSL support Webserver
+- Nginx or any SSL supported Webserver
 - IPFS Required: Yes
 - IPv4 address required
 - Your own DNS name
@@ -40,32 +40,39 @@ In this guide, we will setup a Content Distribution Masternode (CDMN) with colla
 Set up your VPS 
 ===============================
 A VPS, more commonly known as a cloud server, is fully functional installation of an operating system operating within a virtual machine. The virtual machine allows the VPS provider to run multiple systems on one physical server, making it more efficient and much cheaper than having a single operating system running on the “bare metal” of each server. A VPS is ideal for hosting a Historia masternode because they typically offer guaranteed uptime, redundancy in the case of hardware failure and a static IP address that is required to ensure you remain in the masternode payment queue. While running a masternode from home on a desktop computer is technically possible, it will most likely not work reliably because most ISPs allocate dynamic IP addresses to home users.
-We will use Vultr hosting as an example of a VPS. First create an account and add credit. Then go to the Servers menu item on the left and click + to add a new server. Select a location for your new server on the following screen.
+We will use Vultr hosting as an example of a VPS. First create an account and add credit. Then go to the Servers menu item on the left and click + to add a new server. 
+
+Select a location for your new server on the following screen.
 
 .. figure:: /masternodes/img/server-location.png
    :width: 300px
    
-   Select Windows as the server type.
+
+Select Windows as the server type.
 .. figure:: /masternodes/img/server-type1.png
    :width: 300px
    
-   Select a server size offering at least 2GB of memory.
+
+Select a server size offering at least 2GB of memory.
 .. figure:: /masternodes/img/server-type2.png
    :width: 300px 
    
-   Enter a hostname and label for your server. In this example we will use htamn01 as the hostname.
+
+Enter a hostname and label for your server. In this example we will use htamn01 as the hostname.
 .. figure:: /masternodes/img/server-name.png
    :width: 300p
    
-   Add IPv6 for your server. IPv6 isn’t required but nice to have.
+
+Add IPv6 for your server. IPv6 isn’t required but nice to have.
 .. figure:: /masternodes/img/server-ipv6.png
    :width: 300p
    
-   Vultr will now install your server. This process may take a few minutes.
+
+Vultr will now install your server. This process may take a few minutes.
 .. figure:: /masternodes/img/server-location.png
    :width: 300p
    
-   Click Manage when installation is complete and take note of the IPv4 address, username and password.
+Click Manage when installation is complete and take note of the IPv4 address, username and password.
 .. figure:: /masternodes/img/server-management.png
    
 Setup Firewall 
