@@ -16,32 +16,24 @@ Before you begin
 This guide assumes you are setting up a single masternode for the first
 time. You will need:
 
-- 5000 HTA (Content Distribution Masternode)
-- A wallet to store your Historia, preferably a hardware wallet, although Historia Core wallet is also supported
+- 5000 HTA 
+- A wallet to store your Historia, currently only Historia Core wallet is supported
 - A Windows 10 or Windows Server instance. [Can be a PC or VPS]
 - Static IPv4 address on Windows or Port Forwarding setup over the router
-[ Since we are assuming this is a home network, ports need to be publicly open on the Internet. This normally requires Port Forwarding on your router, which is out of scope for this document. Use your favorite search engine to research Port Forwarding. ]
-- Nginx or any SSL support Webserver
-- IPFS [Oprational Daemon]
 - Your own DNS name
-- TCP Ports : [Need to be allowed on Firewall]
-         - TCP Port 10101
-         - TCP Port 8080
-         - TCP Port 5001
-         - TCP Port 4001
-         - TCP Port 443
 
-Masternode Roles
-----------------
+If you are setting up from your own home network, ports need to be publicly open on the Internet. This normally requires Port Forwarding on your router, which is out of scope for this document. Use your favorite search engine to research Port Forwarding.
 
-Unlike most other masternode coins, Historia makes use of a role based masternode system. Currently there are two roles:
- - Content Distribution Masternode 
- 
-   - Collateral Requirement: 5000 HTA
-   - Reward: 25% per block - increaes 2.5% every 2 months until 50% per block
-   - Ports: TCP 10101, TCP 4001, TCP 5001, TCP 8080, TCP 443
-   - IPFS Required: Yes
-   - IPv4 address required
+Masternode Info
+---------------
+
+- Collateral Requirement: 5000 HTA
+- Reward: 32% per block - increaes 2.5% every 2 months until 50% per block
+- Ports: TCP 10101, TCP 4001, TCP 443
+- Nginx or any SSL support Webserver
+- IPFS Required: Yes
+- IPv4 address required
+- Your own DNS name
 
 In this guide, we will setup a Content Distribution Masternode (CDMN) with collateral of 5000. 
 
@@ -232,7 +224,7 @@ Initialize IPFS Daemon for Historia
 Since we will be using IPFS only for Historia, we can safely run the initialization: 
 (Run commands on Windows Powershell or Command Prompt as Admin) ::
 
-   ipfs init -p server
+   ipfs init
 
 Remove Original Bootstap IPFS Nodes and Connect to Historia IPFS Swarm
 -----------------
