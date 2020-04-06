@@ -357,7 +357,7 @@ To install nginx/Windows, download the latest mainline version distribution (1.1
    cd nginx-1.17.9
    start nginx
 
-Go to the ip address of your VPS in a web browser to verify that Nginix is running.
+Go to the ip address of your VPS in a web browser to verify that Nginix is running. If you are running from your home network for now you can go to 127.0.0.1 in a web browser.
 
 Install SSL Certificate
 ================
