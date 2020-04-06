@@ -68,6 +68,7 @@ Add IPv6 for your server. IPv6 isn’t required but nice to have.
    :width: 300px
    
 Vultr will now install your server. This process may take a few minutes.
+
 .. figure:: /masternodes/img/server-location.png
    :width: 300px
    
