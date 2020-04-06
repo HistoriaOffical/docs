@@ -209,7 +209,7 @@ Option 1: Use prebuild package
 -----------------
 Download and follow instruction from this page: ::
 
-   https://ipfs.io/ipfs/Qme5m1hmmMbjdzcDeUC2LtHZxAABYtdmq5mBpvtBsC8VL5/docs/install/
+   https://dist.ipfs.io/#go-ipfs
 
 
 
@@ -249,21 +249,10 @@ Add Historia IPFS bootstrap nodes, configure our IPFS node, and only connect to 
    ipfs bootstrap add /ip4/45.76.236.45/tcp/4001/ipfs/QmeW8VxxZjhZnjvZmyBqk7TkRxrRgm6aJ1r7JQ51ownAwy
    ipfs bootstrap add /ip4/209.250.233.69/tcp/4001/ipfs/Qma946d7VCm8v2ny5S2wE7sMFKg9ZqBXkkZbZVVxjJViyu
 
-   ipfs config --json Datastore.StorageMax '"50GB"'
-   ipfs config --json Gateway.HTTPHeaders.Access-Control-Allow-Headers '["X-Requested-With", "Access-Control-Expose-Headers", "Range", "Authorization"]'
-   ipfs config --json Gateway.HTTPHeaders.Access-Control-Allow-Methods '["POST", "GET"]'
-   ipfs config --json Gateway.HTTPHeaders.Access-Control-Allow-Origin '["*"]'
-   ipfs config --json Gateway.HTTPHeaders.Access-Control-Expose-Headers '["Location", "Ipfs-Hash"]'
-   ipfs config --json Gateway.HTTPHeaders.X-Special-Header '["Access-Control-Expose-Headers: Ipfs-Hash"]'
-   ipfs config --json Gateway.NoFetch 'false'
-   ipfs config --json Swarm.ConnMgr.HighWater '500'
-   ipfs config --json Swarm.ConnMgr.LowWater '200'
+If the commands did not work you have to do these manually by edit config file at C:\Users\<YOURUSERNAME>\.ipfs\config  and add or edit parameters. 
+Change your ipfs configuration file to look something like this. It should be noted that this is not the entire IPFS file, but the areas that need to be changed: ::
 
-If the commands did not work you have to do these manually by edit config file at ~/.ipfs folder and add or edit parameters .
-Change your ipfs configuration file to look something like this: ::
-
-   ...
-    "StorageGCWatermark": 90,
+   ...snipped...
     "StorageMax": "50GB"
   },
   "Discovery": {
@@ -307,7 +296,9 @@ Change your ipfs configuration file to look something like this: ::
     },
     "NoFetch": false,
     "PathPrefixes": [],
-  ...
+    "RootRedirect": "",
+    "Writable": false
+   ...snipped...
 
    
 Next, download the swarm.key to authenticate to the Historia IPFS Swarm: ::
