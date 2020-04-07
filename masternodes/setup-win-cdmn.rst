@@ -47,37 +47,30 @@ We will use Vultr hosting as an example of a VPS. First create an account and ad
 Select a location for your new server on the following screen.
 
 .. figure:: /masternodes/img/server-location.png
-   :width: 300px
    
 Select Windows as the server type.
 
 .. figure:: /masternodes/img/server-type1.png
-   :width: 300px
    
 Select a server size offering at least 2GB of memory.
 
 .. figure:: /masternodes/img/server-type2.png
-   :width: 300px 
    
 Enter a hostname and label for your server. In this example we will use htamn01 as the hostname.
 
 .. figure:: /masternodes/img/server-name.png
-   :width: 300px
    
 Add IPv6 for your server. IPv6 isn’t required but nice to have.
 
 .. figure:: /masternodes/img/server-ipv6.png
-   :width: 300px
    
 Vultr will now install your server. This process may take a few minutes.
 
 .. figure:: /masternodes/img/server-location.png
-   :width: 300px
    
 Click Manage when installation is complete and take note of the IPv4 address, username and password.
 
 .. figure:: /masternodes/img/server-management.png
-   :width: 300px  
 
 
 Setup Firewall 
@@ -86,16 +79,12 @@ To make communication possible you need to allow following TCP ports through you
 **If you are setting this up on your home network you must also setup port forwarding for the required ports**
 
 .. figure:: /masternodes/img/firewall-1-2-3.png
-   :width: 300px
    
 .. figure:: /masternodes/img/firewall-4-5.png
-   :width: 300px
    
 .. figure:: /masternodes/img/firewall-6-7.png
-   :width: 300px
    
 .. figure:: /masternodes/img/firewall-8-9.png
-   :width: 300px   
    
 
 Setup Domain Name System (DNS) A Record
@@ -106,12 +95,10 @@ Remember that if you live in a oppressive country, your name will be associated 
 Option 1: A Record – NS Zone
 ----------------
 .. figure:: /masternodes/img/Domain-NS_Zone.png
-   :width: 300px
 
 Option 2: Child Name – Domain Panel
 ----------------
 .. figure:: /masternodes/img/Domain-child.png
-   :width: 300px
 
 
 Install Historia Windows Wallet
@@ -135,7 +122,7 @@ Open Historia Core wallet and wait for it to synchronize with the network.
 It should look like this when ready:
 
 .. figure:: /img/Picture10.png
-   :width: 400px
+
 
    Fully synchronized Historia Core wallet
 
@@ -578,7 +565,7 @@ Your masternode is now registered and will appear on the Deterministic Masternod
 
 You will probably need to wait for 1 block before your masternode will finally reaches ENABLED. Give it some time.
 
-Congratulations! Your masternode is now running.
+
 
 Install Sentinel
 ================
@@ -615,7 +602,7 @@ Run Task Scheduler
 Create Task -> General Tab - Name: Sentinal
 
 .. figure:: ../img/1.PNG
-   :width: 400px
+
 
 Settings:
 
@@ -627,7 +614,7 @@ Settings:
 For a duration of:Indefinitely  
 
 .. figure:: ../img/2.PNG
-   :width: 400px
+
 
 Settings:
 
@@ -639,7 +626,7 @@ Settings:
 Click Ok  
 
 .. figure:: ../img/3.PNG
-   :width: 400px
+
 
 Settings:
 
@@ -649,10 +636,10 @@ Settings:
 Click Ok  
 
 .. figure:: ../img/4.PNG
-   :width: 400px
 
 
 
+Congratulations! Your masternode is now running.
 For support please come ask questions on the support channel in the Historia Discord.
 
 
