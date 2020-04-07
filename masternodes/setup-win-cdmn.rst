@@ -249,7 +249,7 @@ Add Historia IPFS bootstrap nodes, configure our IPFS node, and only connect to 
    ipfs bootstrap add /ip4/45.76.236.45/tcp/4001/ipfs/QmeW8VxxZjhZnjvZmyBqk7TkRxrRgm6aJ1r7JQ51ownAwy
    ipfs bootstrap add /ip4/209.250.233.69/tcp/4001/ipfs/Qma946d7VCm8v2ny5S2wE7sMFKg9ZqBXkkZbZVVxjJViyu
 
-If the commands did not work you have to do these manually by edit config file at C:\\Users\\<YOURUSERNAME>\\.ipfs\\config  and add or edit parameters. 
+If the commands did not work you have to do these manually by edit config file at C:\\Users\\<YOURUSERNAME>\\\.ipfs\\config  and add or edit parameters. 
 Change your ipfs configuration file to look something like this. It should be noted that this is not the entire IPFS file, but the areas that need to be changed: ::
 
    ...snipped...
