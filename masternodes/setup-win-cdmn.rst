@@ -491,7 +491,7 @@ The private keys to the owner and fee source addresses must exist in the wallet 
 
    walletpassphrase yourSecretPassword 300
 
-Send some coins to your **transaction fee source (feeSourceAddress)**.
+Send some coins to your **transaction fee source (feeSourceAddress)**. ::
    
    sendtoaddress HQyqm7srzV7nYhGLjuzTzjBs452suStCQW 2
    
