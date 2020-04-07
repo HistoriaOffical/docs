@@ -29,7 +29,7 @@ Masternode Info
 
 - Collateral Requirement: 5000 HTA
 - Reward: 32% per block - increaes 2.5% every 2 months until 50% per block
-- Ports: TCP 10101, TCP 4001, TCP 443
+- Ports: TCP 10101, TCP 4001, TCP 443, TCP 80
 - Nginx or any SSL supported Webserver
 - IPFS Required: Yes
 - IPv4 address required
