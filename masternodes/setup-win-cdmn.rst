@@ -301,9 +301,8 @@ Change your ipfs configuration file to look something like this. It should be no
    ...snipped...
 
    
-Next, download the swarm.key to authenticate to the Historia IPFS Swarm: ::
+Next, download the swarm.key to authenticate to the Historia IPFS Swarm and store it in C:\\Users\\<YOURUSERNAME>\\.ipfs\\config: ::
 
-   cd ~/.ipfs
    https://raw.githubusercontent.com/HistoriaOffical/ipfs-swarmkey/master/swarm.key
    
 Now when you start IPFS, the IPFS daemon will now connect to the Historia IPFS swarm when started. ::
@@ -344,88 +343,74 @@ Output ::
    /ip4/45.32.194.49/tcp/4001/ipfs/QmZXbb5gRMrpBVe79d8hxPjMFJYDDo9kxFZvdb7b2UYamj
    /ip4/45.76.236.45/tcp/4001/ipfs/QmeW8VxxZjhZnjvZmyBqk7TkRxrRgm6aJ1r7JQ51ownAwy
    
-You MUST see at least these peers to verify you are connected to the Historia IPFS swarm.
+You MUST see at least these peers to verify you are connected to the Historia IPFS swarm. If you do not see these peers, you will not receive any extra rewards, so please go back, re-read the IPFS documentation and get connected to the proper swarm.
 
 
-Nginx Web Proxy
-================
-To install nginx/Windows, download the latest mainline version distribution (currently 1.17.9) from  http://nginx.org/en/download.html 
+Setup IIS in Windows, SSL Certificate, and point to IPFS
+========================================================
+Because this is a content distribution masternode, you must setup IIS web server with a valid SSL certificate in a reverse proxy setup to properly point to IPFS. If IIS is not setup properly you will not receive the extra masternode rewards.
 
-After you have downloaded Nginx, find the file in explorer and open the file. Copy the root directory (nginx-1.17.9) of the archive to  C:\\. Note you can run this from anywhere, we are using this location for this example. 
+Install IIS
+-----------
+First step in this process is to install IIS. Instead of walking through that process here, we will point you to this 10 step installation procedure: https://teckangaroo.com/enable-iis-windows-10/
 
-After this we will open a command prompt and start the nginx webserver command  ::
+Create Binding in IIS
+---------------------
+To properly setup the SSL certificate you must create a binding in IIS for your DNS A record that should already be setup and pointed at your public IP address at this point. We are assuming you are using the "Default Web Site" for this example.
 
+- Open Run Command using the shortcut Win Key + R.
+- Type in 'inetmgr'.
+- Select and run the Internet Information Services (IIS) Manager.
+- Expand the left pane and select the "Default Web Site".
+- On the right pane, under Edit Site, click on "Bindings".
+- After the Site Bindings dialog box opens, click the "Add" button.
+- Leave everything default and add your DNS A record name in the Host Name box. An example would be testwinmn.historia.network
+- Click Ok, then click close.
+- On left hand pane, under the Manage Website section, click Restart
 
-   cd c:\nginx-1.17.9
-   start nginx.exe
+Setup SSL Certificate for IIS
+------------------------------
+To setup the SSL certicate we are going to be using a free utility called Win-Acme, https://www.win-acme.com/ which uses the Let's Encrypt SSL certificate authority to issue a valid SSL certificate for free.
 
-Go to the ip address of your VPS in a web browser to verify that Nginix is running. If you are running from your home network for now you can go to 127.0.0.1 in a web browser.
+- Goto https://www.win-acme.com/, and download the latest version
+- Extract the zip file into your C:\\Program Files\ into a new folder called Win-acme
+- Find the wacs.exe file in the new folder and right click on the file and select "Run as Administrator".
+- Win-acme will start
+- Choose: N: Create new certificate (simple for IIS)
+- Choose: 1: Default Web Site (1 binding)
+- Choose: 3: Pick all bindings
+- Choose: Continue with this selection? (y*/n)  - yes
 
-Install SSL Certificate
-================
-In this example we will be using the free SSL certificate service win-acme to create and install our SSL certificate. First we must download and install the ACMEv2. In your web browser go to and download the latest version from https://www.win-acme.com/ ::
+If all goes well you will have a new SSL certificate installed in IIS for your Default Site. If the Create certicate failed, check the following things:
 
-Next we need to prepare Nginx configuration file for ACMEv2. If you’re using the default location from above, the configuration file will be found at C:\\nginx-1.17.9\\conf\\nginx.conf  
+- Is Your firewall is blocking port 80 and port 443?
 
-Open the Nginx configuration file with a text editor such as notepad and find the server_name directive. Replace "localhost", with your own A record domain name, that you have setup from above.  
+Setup Reverse Proxy from IIS to IPFS
+------------------------------------
+Depending on your setup, you may need to install additional Microsoft IIS modules
+- Confirm it's installed or install the Windows URL rewrite module. It can be downloaded from https://www.iis.net/downloads/microsoft/url-rewrite
+- Confirm it's installed or install Application Request Routing (ARR). It can be downloaded from https://www.iis.net/downloads/microsoft/application-request-routing
 
-After editing the configuration file, the server_name directive should look as follows. In this example, we assume that your domain is example.com and that you’re requesting a certificate for example.com. Make sure to use your own domain name here: ::
-
-   server_name example.com;
-
-Save the file and restart Nginx to verify it comes up properly again: ::
-
-   nginx.exe –s reload
-
-Lets finish this process and setup Nginix to point to the IPFS daemon that is running on your masternode. If you’re using the default location from above, the configuration file will be found at C:\\nginx-1.17.9\\conf\\nginx.conf   open it with a text editor such as notepad again.
-Change your nginx configuration file to look something like this: ::
-
-   http {
-    include       mime.types;
-    default_type  application/octet-stream;
-    sendfile        on;
-    keepalive_timeout  65;
-
-    server {
-        listen       80;
-        server_name  example.com;
-        location / {
-               proxy_pass http://127.0.0.1:8080;
-               proxy_set_header Host $host;
-               proxy_cache_bypass $http_upgrade;
-               proxy_set_header X-Forwarded-For $remote_addr;
-               allow all;
-        }
-        error_page   500 502 503 504  /50x.html;
-        location = /50x.html {
-            root   html;
-        }
-    }
-    server {
-		listen [::]:443 ssl ipv6only=on;
-        listen       443 ssl;
-        server_name  mn165.peopleland.net;
-        ssl_certificate      C:/nginx-1.17.9/html/mn54.peopleland.net-chain.pem;
-        ssl_certificate_key  C:/nginx-1.17.9/html/mn54.peopleland.net-key.pem;
-            location / {
-        proxy_set_header X-Forwarded-Host $host;
-        proxy_set_header X-Forwarded-Server $host;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_pass http://localhost:8080;
-    }
-    }
-    }
-   
-Save the file and restart Nginx: ::
-
-   nginx.exe -s reload 
+- Open Run Command using the shortcut Win Key + R.
+- Type in 'inetmgr'.
+- Select and run the Internet Information Services (IIS) Manager.
+- Expand the left pane and select the "Default Web Site".
+- In the main pane in the middle, select the URL Rewrite module.
+- After the URL Rewrite module has opened, on the left hand pane, select "Add Rule(s)"...
+- After the "Add Rule(s)" dialog box opens, click on the "Reverse Proxy" and click OK.
+- In the "Enter the server name of the IP address where the HTTP requests will be forwarded:" box, point to your IPFS server: 127.0.0.1:8080
+- Leave all other options default values.
+- Click Ok
+- On the left pane and select the "Default Web Site", again.
+- On right pane, under Manage Website, select Restart.
 
 Congratulations! You now have finished setup for IPFS. You can now test out the IPFS Nginx proxy combination by opening the following in your browser: ::
 
    https://<yourdomainname>/ipfs/QmS4ustL54uo8FzR9455qaxZwuMiUhyvMcX9Ba8nUH4uVv/readme
 
-If you see the IPFS help message, you have successful setup your IPFS Nginx proxy. You can now proceed to installing your Historia masternode.
-Continue with the next step to construct the ProTx transaction required to enable your masternode.
+If you see the IPFS help message, you have successful setup your IPFS server with IIS in a reverse proxy configuration with a valid SSL certifcate. If you do not see the IPFS help message, you must go back over all steps and get this properly working before you can continue to setup your Historia masternode.
+
+If everything is good, you can now proceed to installing your Historia masternode. Continue with the next step to construct the ProTx transaction required to enable your masternode.
 
 Register your masternode
 ================
@@ -471,7 +456,7 @@ The editor appears with the existing masternode configuration. Add or uncomment 
  masternodeblsprivkey=395555d67d884364f9e37e7e1b29536519b74af2e5ff7b62122e62c2fffab35e
 
 Press enter to make sure there is a blank line at the end of the file, then save and close the editor. We now need to restart the masternode for this change to take effect. Close Historia Core and run it again. 
-[waiting a few seconds in between to give Historia Core time to shut down.]
+
 We will now prepare the transaction used to register the masternode on the network.
 
 Prepare a ProRegTx transaction
