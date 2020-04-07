@@ -414,9 +414,9 @@ If you see the IPFS help message, you have successful setup your IPFS server wit
 If everything is good, you can now proceed to installing your Historia masternode. Continue with the next step to construct the ProTx transaction required to enable your masternode.
 
 Register your masternode
-================
+========================
 Identify the funding transaction
------------------
+--------------------------------
 If you used an address in Historia Core wallet for your collateral transaction, you now need to find the txid of the transaction. 
 Click **Tools > Debug console** and enter the following command: ::
 
@@ -445,10 +445,10 @@ If you are using a hosting service, they may provide you with their public key, 
 **These keys are NOT stored by the wallet and must be kept secure, similar to the value provided in the past by the** masternode genkey **command**.
 
 Add the private key to your masternode configuration
------------------
-The public key will be used in following steps. The private key must be entered in the **historia.conf** file on the masternode. This allows the masternode to watch the blockchain for relevant Pro*Tx transactions, and will cause it to start serving as a masternode when the signed ProRegTx is broadcast by the owner (final step below). Log in to your masternode and edit the configuration file: ::
+----------------------------------------------------
+The public key will be used in following steps. The private key must be entered in the **historia.conf** file on the masternode. This allows the masternode to watch the blockchain for relevant Pro*Tx transactions, and will cause it to start serving as a masternode when the signed ProRegTx is broadcast by the owner (final step below). Edit the configuration file: ::
 
-  ~/.historiacore/historia.conf
+   C:\Users\<yourusername>\AppData\Roaming\HistoriaCore\historia.conf
 
 The editor appears with the existing masternode configuration. Add or uncomment these lines in the file, replacing the key with your BLS private key generated above: ::
 
@@ -456,32 +456,32 @@ The editor appears with the existing masternode configuration. Add or uncomment 
  masternodecollateral=5000
  masternodeblsprivkey=395555d67d884364f9e37e7e1b29536519b74af2e5ff7b62122e62c2fffab35e
 
-Press enter to make sure there is a blank line at the end of the file, then save and close the editor. We now need to restart the masternode for this change to take effect. Close Historia Core and run it again. 
+Press enter to make sure there is a blank line at the end of the file, then save and close the editor. We now need to restart the Historia Core for this change to take effect. Close Historia Core and run it again. 
 
 We will now prepare the transaction used to register the masternode on the network.
 
 Prepare a ProRegTx transaction
 -----------------
 A pair of BLS keys for the operator were already generated above, and the private key was entered on the masternode. The public key is used in this transaction as the **operatorPubKey**.
-First, we need to get a new, unused address from the wallet to serve as the **owner key address (ownerKeyAddr)**. This is not the same as the collateral address holding 5000 Historia. Generate a new address as follows: ::
+First, we need to get a new, unused address from the wallet to serve as the **owner key address (ownerKeyAddr)**. This is not the same as the collateral address holding 5000 Historia. Generate a new address in Historia Core by clicking **Tools > Debug console** and entering the following command: ::
 
  getnewaddress
  
  HTGfMbCy2X65th3L78JVyqpzhu6p1fbSC6
 
-This address can also be used as the **voting key address (votingKeyAddr)**. Alternatively, you can specify an address provided to you by your chosen voting delegate, or simply generate a new voting key address as follows: ::
+Next generate your a **voting key address (votingKeyAddr)**. Simply generate a new voting key address as follows: ::
 
    getnewaddress
    
    HDsy8GUnsdFKWrRHB8WbD4oaLvETDZ9scY
 
-Then either generate or choose an existing address to receive the **owner’s masternode payouts (payoutAddress)**. It is also possible to use an address external to the wallet: ::
+Then generate **owner’s masternode payouts (payoutAddress)**. It is also possible to use an address external to the wallet: ::
 
    getnewaddress
    
    HEAjS5DJ9cjprZvk3t1eeq7jn2dhZztfDJ
-
-You can also optionally generate and fund another address as the **transaction fee source (feeSourceAddress)**. If you selected an external payout address, you must specify a fee source address. Either the payout address or fee source address must have enough balance to pay the transaction fee, so send a few coins here, or the final register_submit transaction will fail.: ::
+   
+Then generate **transaction fee source (feeSourceAddress)**. Then fee source address must have enough balance to pay the transaction fee, so send a few coins here, or the final register_submit transaction will fail.: ::
 
    getnewaddress
    
@@ -490,6 +490,10 @@ You can also optionally generate and fund another address as the **transaction f
 The private keys to the owner and fee source addresses must exist in the wallet submitting the transaction to the network. If your wallet is protected by a password, it must now be unlocked to perform the following commands. Unlock your wallet for 5 minutes: ::
 
    walletpassphrase yourSecretPassword 300
+
+Send some coins to your **transaction fee source (feeSourceAddress)**.
+   
+   sendtoaddress HQyqm7srzV7nYhGLjuzTzjBs452suStCQW 2
    
 We will now prepare an unsigned ProRegTx special transaction using the protx register_prepare command. This command has the following syntax: ::
 
@@ -556,7 +560,7 @@ We will now submit the ProRegTx special transaction to the blockchain to registe
    protx register_submit tx sig
    
 Where:
-         - **tx**: The serialized transaction previously returned in the **tx** output field from the **rotx register_prepare** command
+         - **tx**: The serialized transaction previously returned in the **tx** output field from the **protx register_prepare** command
          - **sig**: The message signed with the collateral key from the **signmessage** command
 
 Example: ::
@@ -569,13 +573,12 @@ Output: ::
    
 Your masternode is now registered and will appear on the Deterministic Masternode List after the transaction is mined to a block. You can view this list on the **Masternodes -> DIP3 Masternodes** tab of the Historia Core wallet, or in the console using the command **protx list valid**, where the txid of the final **protx register_submit** transaction identifies your masternode.
 
-You will probably need to wait around 30 minutes as the node passes through the PRE_ENABLED stage and finally reaches ENABLED. Give it some time.
-At this point you can safely log out of your server by typing exit. Congratulations! Your masternode is now running.
+You will probably need to wait for 1 block before your masternode will finally reaches ENABLED. Give it some time.
+
+Congratulations! Your masternode is now running.
 
 Install Sentinel
 ================
-DIP003 introduced several changes to how a masternode is set up and operated. These changes and the three keys required for the different masternode roles are described briefly under dip3-changes in this documentation.
-
 
 Download and install Sentinel for Windows
 https://github.com/HistoriaOffical/sentinel/releases
