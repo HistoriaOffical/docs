@@ -83,6 +83,7 @@ Click Manage when installation is complete and take note of the IPv4 address, us
 Setup Firewall 
 ===============================
 To make communication possible you need to allow following TCP ports through your firewall.
+**If you are setting this up on your home network you must also setup port forwarding for the required ports**
 
 .. figure:: /masternodes/img/firewall-1-2-3.png
    :width: 300px
