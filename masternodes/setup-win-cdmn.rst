@@ -19,7 +19,7 @@ time. You will need:
 - 5000 HTA 
 - A wallet to store your Historia, currently only Historia Core wallet is supported
 - A Windows 10 or Windows Server instance. [Can be a PC or VPS]
-- Static IPv4 address on Windows or Port Forwarding setup over the router
+- Static IPv4 address
 - Your own DNS name
 
 If you are setting up from your own home network, ports need to be publicly open on the Internet. This normally requires Port Forwarding on your router, which is out of scope for this document. Use your favorite search engine to research Port Forwarding.
@@ -29,10 +29,10 @@ Masternode Info
 
 - Collateral Requirement: 5000 HTA
 - Reward: 32% per block - increaes 2.5% every 2 months until 50% per block
-- Ports: TCP 10101, TCP 4001, TCP 443, TCP 80
-- Nginx or any SSL supported Webserver
+- Ports: TCP 10101, TCP 4001, TCP 443, TCP 80 (Home network would require port forwarding)
+- IIS or any SSL supported Webserver
 - IPFS Required: Yes
-- IPv4 address required
+- Static IPv4 address required
 - Your own DNS name
 
 In this guide, we will setup a Content Distribution Masternode (CDMN) with collateral of 5000. 
