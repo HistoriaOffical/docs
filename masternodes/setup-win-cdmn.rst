@@ -373,7 +373,7 @@ Setup SSL Certificate for IIS
 To setup the SSL certicate we are going to be using a free utility called Win-Acme, https://www.win-acme.com/ which uses the Let's Encrypt SSL certificate authority to issue a valid SSL certificate for free.
 
 - Goto https://www.win-acme.com/, and download the latest version
-- Extract the zip file into your C:\\Program Files\ into a new folder called Win-acme
+- Extract the zip file into your C:\\Program Files\\  into a new folder called Win-acme
 - Find the wacs.exe file in the new folder and right click on the file and select "Run as Administrator".
 - Win-acme will start
 - Choose: N: Create new certificate (simple for IIS)
@@ -388,6 +388,7 @@ If all goes well you will have a new SSL certificate installed in IIS for your D
 Setup Reverse Proxy from IIS to IPFS
 ------------------------------------
 Depending on your setup, you may need to install additional Microsoft IIS modules
+
 - Confirm it's installed or install the Windows URL rewrite module. It can be downloaded from https://www.iis.net/downloads/microsoft/url-rewrite
 - Confirm it's installed or install Application Request Routing (ARR). It can be downloaded from https://www.iis.net/downloads/microsoft/application-request-routing
 
