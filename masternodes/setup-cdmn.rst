@@ -560,6 +560,7 @@ To verify that IPFS is connect to the correct swarm::
    ipfs swarm peers
    
 Output::
+
    /ip4/149.28.22.65/tcp/4001/ipfs/QmZkRv4qfXvtHot37STR8rJxKg5cDKFnkF5EMh2oP6iBVU
    /ip4/149.28.247.81/tcp/4001/ipfs/QmcvrQ8LpuMqtjktwXRb7Mm6JMCqVdGz6K7VyQynvWRopH
    /ip4/202.182.119.4/tcp/4001/ipfs/QmVjkn7yEqb3LTLCpnndHgzczPAPAxxpJ25mNwuuaBtFJD
@@ -582,13 +583,13 @@ Install SSL Certificate
 -----------------------
 In this example we will be using the free SSL certificate service Let's Encrypt to create and install our SSL certificate. First we must install the Let's Encrypt Certbot::
 
-   add-apt-repository ppa:certbot/certbot
-   apt-get update
-   apt-get -y install python-certbot-nginx
+   sudo add-apt-repository ppa:certbot/certbot
+   sudo apt-get update
+   sudo apt-get -y install python-certbot-nginx
 
 Next we need to prepare Nginx configuration file for Let's Encrypt Certbot. If you're using the default configuration file /etc/nginx/sites-available/default open it with a text editor such as nano and find the server_name directive. Replace the underscore, _, with your own domain name(s)::
 
-   nano /etc/nginx/sites-available/default
+   sudo nano /etc/nginx/sites-available/default
    
 After editing the configuration file, the server_name directive should look as follows. In this example, we assume that your domain is example.com and that you're requesting a certificate for example.com. Make sure to use your own domain name here::
 
