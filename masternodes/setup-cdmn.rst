@@ -601,7 +601,7 @@ Save the file and restart Nginx::
    
 The following command will obtain a certificate for you. Edit your Nginx configuration to use it, and reload Nginx.::
 
-   certbot --nginx -d example.com
+   sudo certbot --nginx -d example.com
    
 If Certbot can obtain an SSL certificate, it will ask how you would like to configure your HTTPS settings. Please choose option 2 to redirect who visit your IPFS node over an unsecured connection.::
 
@@ -618,7 +618,7 @@ If the setup process has gone correctly, you can now go to your domain name in a
 
 Lets finish this process and setup Nginix to point to the IPFS daemon that is running on your masternode. If you're using the default configuration file /etc/nginx/sites-available/default open it with a text editor such as nano again.::
 
-   nano /etc/nginx/sites-available/default
+   sudo nano /etc/nginx/sites-available/default
    
 Change your nginx configuration file to look something like this::
 
