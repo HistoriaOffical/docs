@@ -23,7 +23,7 @@ Get Your Voting Private Key
 
 The Historia developers have tried to make this process as simple as possible for the users. On the wallet you have setup your masternode or voting node from, click **Tools > Debug console**. At the console run the following commmand: ::
 
-masternode status
+   masternode status
 
 The output will look something like this: ::
 
