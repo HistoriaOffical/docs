@@ -51,5 +51,6 @@ Contents
    governance/index.rst
    votingnodes/index
    masternodes/index
+   basex.rst
 
    
