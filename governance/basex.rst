@@ -25,7 +25,6 @@ masternode status
 
 The output will look something like this: ::
 
-{
   "proTxHash": "1656038a406384d508ebee5e1fe1fb48c5560391cd3f6b162f65575fa4c1f95a",
   "collateralHash": "849bce016be646c7844587981cab8a3f64148434d20c637a3d8c4a0cc579f056",
   "collateralIndex": 1,
@@ -45,8 +44,6 @@ The output will look something like this: ::
     "identity": "mn1.historia.network",
     "payoutAddress": "HPi1Q925T7BjHhWndWTh5w3xvZqw5AZ7oi",
     "pubKeyOperator": "1098e4f499307c4931d6d01438efe811d670226eb1e715e4ed91e78124b32c6dcd636540dc980e0cdc7272d3406ef5cb"
-  }
-}
 
 Find your **votingAddress**, **collateralHash**, **collateralIndex**. These will be needed to register your masternode in BaseX. In this example it is: ::
 
@@ -57,13 +54,13 @@ Find your **votingAddress**, **collateralHash**, **collateralIndex**. These will
 This next command is important to understand what exactly is happening. Normally you should NEVER run the dumpprivkey command and give the output to a third party. But in the one instance this is safe. There should not be any coins associated with this address. The votingAddress private key is required to use BaseX for voting. During the setup of your private key into BaseX you will encrypt this within the BaseX application and even if the database is hacked, private keys will not be lost.
 Alternatively you can just use the HistoriaCore GUI Wallet to vote.
 
-Now in the debug console type in: ::
+Using the previous **votingAddress** as an example we can now get the private key of the voting address in the debug console type in. Please use your own **votingAddress** key below: ::
 
-   HTTM4QbcGiWAWtcJB9g22meoYupHnErcyo
+   dumprivkey HTTM4QbcGiWAWtcJB9g22meoYupHnErcyo
 
 Output: ::
 
-   cSh24QcuT<REMOVE FOR PRIVACY>
+   cSh24QcuT<REMOVED FOR PRIVACY>
 
 Add your voting address private key to BaseX
 --------------------------------------------
@@ -75,12 +72,12 @@ Login to the BaseX application and go to Masternodes->My Masternode.
 .. figure:: /img/basex1.png
    :width: 400px
 
-Login to the BaseX application and go to Masternodes->My Masternode.
+Add your masternode details. Indentity, Collateral Transaction Hash, and Collateral Index is required.
 
 .. figure:: /img/basex2.png
    :width: 400px
 
-Login to the BaseX application and go to Masternodes->My Masternode.
+Copy your **votingAddress** private key in to the "Voting Priv Keys" field. Add a different password than what you use to login to the website, to encrypt your private key. Click the Update Private Key Data button.
 
 .. figure:: /img/basex3.png
    :width: 400px
