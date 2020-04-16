@@ -71,15 +71,15 @@ Add your voting address private key to BaseX
 After you have registered your user on BaseX (https://basex.historia.network/) 
 
 Login to the BaseX application and go to Masternodes->My Masternode.
-.. figure:: ../img/basex1.png
+.. figure:: /img/basex1.png
    :width: 600px
 
 Login to the BaseX application and go to Masternodes->My Masternode.
-.. figure:: ../img/basex2.png
+.. figure:: /img/basex2.png
    :width: 600px
 
 Login to the BaseX application and go to Masternodes->My Masternode.
-.. figure:: ../img/basex3.png
+.. figure:: /img/basex3.png
    :width: 600px
 
 
