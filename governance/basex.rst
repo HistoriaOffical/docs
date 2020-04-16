@@ -5,7 +5,7 @@
 .. _basex-setup:
 
 ==========================================
-Using BaseX
+Using BaseX for Voting
 ==========================================
 
 Setting up BaseX with your voting keys requires a basic understanding of how to use Historia GUI Wallet and a website.
