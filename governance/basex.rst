@@ -2,13 +2,15 @@
    :description: This guide describes how to set your voting keys on BaseX
    :keywords: historia, guide, voting keys, setup, BaseX
 
-.. _votingnode-setup:
+.. _basex-setup:
 
 ==========================================
 Using BaseX
 ==========================================
 
 Setting up BaseX with your voting keys requires a basic understanding of how to use Historia GUI Wallet and a website.
+
+https://basex.historia.network/
 
 Before you begin
 ================
