@@ -67,20 +67,21 @@ Add your voting address private key to BaseX
 
 After you have registered your user on BaseX (https://basex.historia.network/) 
 
-Login to the BaseX application and go to Masternodes->My Masternode.
+Login to the BaseX application and go to Masternodes->My Masternode, as seen below.
 
 .. figure:: /img/basex1.png
    :width: 400px
 
-Add your masternode details. Indentity, Collateral Transaction Hash, and Collateral Index is required.
+Add your masternode details. Indentity, Collateral Transaction Hash, and Collateral Index is required, as seen below.
 
 .. figure:: /img/basex2.png
    :width: 400px
 
-Copy your **votingAddress** private key in to the "Voting Priv Keys" field. Add a different password than what you use to login to the website, to encrypt your private key. Click the Update Private Key Data button.
+Copy your **votingAddress** private key in to the "Voting Priv Keys" field. Add a different password than what you use to login to the website, to encrypt your private key. Click the Update Private Key Data button, as seen below.
 
 .. figure:: /img/basex3.png
    :width: 400px
 
 
+You masternode or voting node has now been registered and you can now use this site to vote on future proposals or records.
 
