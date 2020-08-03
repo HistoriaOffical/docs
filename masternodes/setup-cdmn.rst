@@ -30,7 +30,7 @@ Masternode Info
 
 - Collateral Requirement: 5000 HTA
 - Reward: 32% per block - increaes 2.5% every 2 months until 50% per block
-- Ports: TCP 10101, TCP 4001, TCP 443
+- Ports: TCP 10101, TCP 4001, TCP 443, TCP 80
 - IPFS Required: Yes
 - IPv4 address required
 - DNS name
@@ -180,6 +180,7 @@ newly secured environment as the new user::
   ufw allow ssh/tcp
   ufw limit ssh/tcp
   ufw allow 10101/tcp
+  ufw allow 443/tcp
   ufw allow 443/tcp  
   ufw allow 4001/tcp  
   ufw logging on
@@ -581,7 +582,7 @@ Go to the ip address of your VPS in a web browser to verify that Nginix is runni
 
 Install SSL Certificate
 -----------------------
-In this example we will be using the free SSL certificate service Let's Encrypt to create and install our SSL certificate. First we must install the Let's Encrypt Certbot::
+In this example we will be using the free SSL certificate service Let's Encrypt to create and install our SSL certificate. First we must install the Let's Encrypt Certbot. Note YOU MUST keep TCP 80 open to get and maintain a valid SSL certificate::
 
    sudo add-apt-repository ppa:certbot/certbot
    sudo apt-get update
