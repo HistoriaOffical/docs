@@ -83,12 +83,6 @@ Change the Gateway line to look like::
       "/ip6/::/tcp/8080"
     ],
 
-   
-Next, download the swarm.key to authenticate to the Historia IPFS Swarm::
-
-   cd ~/.ipfs
-   wget https://raw.githubusercontent.com/HistoriaOffical/ipfs-swarmkey/master/swarm.key
-   
 Now when you start IPFS, the IPFS daemon will now connect to the Historia IPFS swarm when started.
 
 You can view a valid sample config file here::
