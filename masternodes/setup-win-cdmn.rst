@@ -290,11 +290,6 @@ Change your ipfs configuration file to look something like this. It should be no
     "Writable": false
    ...snipped...
 
-   
-Next, download the swarm.key to authenticate to the Historia IPFS Swarm and store it in C:\\Users\\<YOURUSERNAME>\\.ipfs\\config: ::
-
-   https://raw.githubusercontent.com/HistoriaOffical/ipfs-swarmkey/master/swarm.key
-   
 Now when you start IPFS, the IPFS daemon will now connect to the Historia IPFS swarm when started. ::
 
   ipfs daemon
