@@ -74,21 +74,23 @@ Login to the Web App application and go to Masternodes->My Masternode, as seen b
 .. figure:: /img/bx1.png
    :width: 400px
 
-Add your masternode details. Indentity, Collateral Transaction Hash, and Collateral Index is required, as seen below.
+Add your masternode details. Identity, Collateral Transaction Hash, and Collateral Index is required, as seen below. It should be noted that Identity is just for your own records and it doesn't matter the value.
 
 .. figure:: /img/bx2.png
    :width: 400px
-
-Copy your **votingAddress** private key in to the "Voting Priv Keys" field. Add a different password than what you use to login to the website, to encrypt your private key. Click the Update Private Key Data button, as seen below.
+   
+Your masternode or voting node is now registered in the web application, however you must now uploaded your voting private key. Click the Update button for the masternode or voting node that you want to add the voting private key to, as seen below.
 
 .. figure:: /img/bx3.png
    :width: 400px
    
-Test
+
+Next enter in the your current password for the web application into the Password field. This will encrypt your voting private key preventing anyone else from using it. Copy your **votingAddress** private key in to the "Voting Address Private Key" field. Then click the Update button, as seen below.
+
 
 .. figure:: /img/bx4.png
    :width: 400px
 
 
-You masternode or voting node has now been registered and you can now use this site to vote on future proposals or records.
+You masternode or voting node has now been registered, your voting key has now been stored, and you can now use this web application to vote on future proposals or records.
 
