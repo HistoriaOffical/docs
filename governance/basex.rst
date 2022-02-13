@@ -71,17 +71,22 @@ After you have registered your user on Web App (https://historia.network/)
 
 Login to the Web App application and go to Masternodes->My Masternode, as seen below.
 
-.. figure:: /img/basex1.png
+.. figure:: /img/bx1.png
    :width: 400px
 
 Add your masternode details. Indentity, Collateral Transaction Hash, and Collateral Index is required, as seen below.
 
-.. figure:: /img/basex2.png
+.. figure:: /img/bx2.png
    :width: 400px
 
 Copy your **votingAddress** private key in to the "Voting Priv Keys" field. Add a different password than what you use to login to the website, to encrypt your private key. Click the Update Private Key Data button, as seen below.
 
-.. figure:: /img/basex3.png
+.. figure:: /img/bx3.png
+   :width: 400px
+   
+Test
+
+.. figure:: /img/bx4.png
    :width: 400px
 
 
