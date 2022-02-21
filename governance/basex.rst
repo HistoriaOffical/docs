@@ -58,7 +58,7 @@ Alternatively you can just use the HistoriaCore GUI Wallet to vote.
 
 Using the previous **votingAddress** as an example we can now get the private key of the voting address in the debug console type in. Please use your own **votingAddress** key below: ::
 
-   dumprivkey HTTM4QbcGiWAWtcJB9g22meoYupHnErcyo
+   dumpprivkey HTTM4QbcGiWAWtcJB9g22meoYupHnErcyo
 
 Output: ::
 
