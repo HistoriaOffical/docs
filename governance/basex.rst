@@ -1,5 +1,5 @@
 .. meta::
-   :description: This guide describes how to set your voting keys on BaseX
+   :description: This guide describes how to set your voting keys on the Web App
    :keywords: historia, guide, voting keys, setup, Web App
 
 .. _basex-setup:
@@ -53,7 +53,7 @@ Find your **votingAddress**, **collateralHash**, **collateralIndex**. These will
     "collateralHash": "849bce016be646c7844587981cab8a3f64148434d20c637a3d8c4a0cc579f056",
     "collateralIndex": 1,
     
-This next command is important to understand what exactly is happening. Normally you should NEVER run the dumpprivkey command and give the output to a third party. But in the one instance this is safe. There should not be any coins associated with this address. The votingAddress private key is required to use BaseX for voting. During the setup of your private key into Web App you will encrypt this within the Web App application and even if the database is hacked, private voting keys will not be lost.
+This next command is important to understand what exactly is happening. Normally you should NEVER run the dumpprivkey command and give the output to a third party. But in the one instance this is safe. There should not be any coins associated with this address. The votingAddress private key is required to use Web App for voting. During the setup of your private key into Web App you will encrypt this within the Web App application and even if the database is hacked, private voting keys will not be lost.
 Alternatively you can just use the HistoriaCore GUI Wallet to vote.
 
 Using the previous **votingAddress** as an example we can now get the private key of the voting address in the debug console type in. Please use your own **votingAddress** key below: ::
