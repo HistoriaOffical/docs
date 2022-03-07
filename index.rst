@@ -10,7 +10,7 @@ Historia Documentation
    :width: 60 %
    :align: center
 
-Historia is an experimental new digital currency paired with a data storage system (IPFS) that allows for eternal histoical record storage. Additionally, Historia is a consensus-based, immutable historical record blockchain system designed for record keeping of current events (future history) with emphasis on absolute accuracy and seeks to prevent all assimilations of falsehoods into the historical record.  The Historia project is based on the Bitcoin and the Dash
+Historia is an digital currency paired with a data storage system (IPFS) that allows for eternal histoical record storage. Additionally, Historia is a consensus-based, immutable historical record blockchain system designed for record keeping of current events (future history) with emphasis on absolute accuracy and seeks to prevent all assimilations of falsehoods into the historical record.  The Historia project is based on the Bitcoin and the Dash
 project. The Historia project builds on Dash's masternode system to implement IPFS to offer decentralized record storage and voting of said records via the masternode voting system. Like Dash, Historia 
 currently also offers instant transactions, private
 transactions and operates a self-governing and
