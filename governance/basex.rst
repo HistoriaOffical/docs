@@ -1,5 +1,5 @@
 .. meta::
-   :description: This guide describes how to set your voting keys on BaseX
+   :description: This guide describes how to set your voting keys on the Web App
    :keywords: historia, guide, voting keys, setup, Web App
 
 .. _basex-setup:
@@ -53,12 +53,12 @@ Find your **votingAddress**, **collateralHash**, **collateralIndex**. These will
     "collateralHash": "849bce016be646c7844587981cab8a3f64148434d20c637a3d8c4a0cc579f056",
     "collateralIndex": 1,
     
-This next command is important to understand what exactly is happening. Normally you should NEVER run the dumpprivkey command and give the output to a third party. But in the one instance this is safe. There should not be any coins associated with this address. The votingAddress private key is required to use BaseX for voting. During the setup of your private key into Web App you will encrypt this within the Web App application and even if the database is hacked, private voting keys will not be lost.
+This next command is important to understand what exactly is happening. Normally you should NEVER run the dumpprivkey command and give the output to a third party. But in the one instance this is safe. There should not be any coins associated with this address. The votingAddress private key is required to use Web App for voting. During the setup of your private key into Web App you will encrypt this within the Web App application and even if the database is hacked, private voting keys will not be lost.
 Alternatively you can just use the HistoriaCore GUI Wallet to vote.
 
 Using the previous **votingAddress** as an example we can now get the private key of the voting address in the debug console type in. Please use your own **votingAddress** key below: ::
 
-   dumprivkey HTTM4QbcGiWAWtcJB9g22meoYupHnErcyo
+   dumpprivkey HTTM4QbcGiWAWtcJB9g22meoYupHnErcyo
 
 Output: ::
 
@@ -71,19 +71,26 @@ After you have registered your user on Web App (https://historia.network/)
 
 Login to the Web App application and go to Masternodes->My Masternode, as seen below.
 
-.. figure:: /img/basex1.png
+.. figure:: /img/bx1.png
    :width: 400px
 
-Add your masternode details. Indentity, Collateral Transaction Hash, and Collateral Index is required, as seen below.
+Add your masternode details. Identity, Collateral Transaction Hash, and Collateral Index is required, as seen below. It should be noted that Identity is just for your own records and it doesn't matter the value.
 
-.. figure:: /img/basex2.png
+.. figure:: /img/bx2.png
+   :width: 400px
+   
+Your masternode or voting node is now registered in the web application, however you must now uploaded your voting private key. Click the Update button for the masternode or voting node that you want to add the voting private key to, as seen below.
+
+.. figure:: /img/bx3.png
+   :width: 400px
+   
+
+Next enter in the your current password for the web application into the Password field. This will encrypt your voting private key preventing anyone else from using it. Copy your **votingAddress** private key in to the "Voting Address Private Key" field. Then click the Update button, as seen below.
+
+
+.. figure:: /img/bx4.png
    :width: 400px
 
-Copy your **votingAddress** private key in to the "Voting Priv Keys" field. Add a different password than what you use to login to the website, to encrypt your private key. Click the Update Private Key Data button, as seen below.
 
-.. figure:: /img/basex3.png
-   :width: 400px
-
-
-You masternode or voting node has now been registered and you can now use this site to vote on future proposals or records.
+You masternode or voting node has now been registered, your voting key has now been stored, and you can now use this web application to vote on future proposals or records.
 
