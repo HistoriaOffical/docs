@@ -36,6 +36,7 @@ a self-operated masternode.
    hosting.rst
    setup-cdmn.rst
    setup-win-cdmn.rst
+   setup-local-basex.rst
 
 
 
