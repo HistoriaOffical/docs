@@ -1,43 +1,61 @@
 .. meta::
-   :description: This guide describes how to set up a Historia voting node. 
+   :description: This guide describes how to set up the Historia Local Web App
    :keywords: historia, guide, voting nodes, setup,
 
 .. _votingnode-setup:
 
 ==========================================
-Setup a Voting Node
+Setup the Historica Local Web Application
 ==========================================
 
-Setting up a voting node requires a basic understanding of how to use a computer, as well as an ability to follow instructions closely. 
+Setting up a Historica Local Web App requires a basic understanding of how to use a computer, as well as an ability to follow instructions closely. 
 
 Before you begin
 ================
 
-This guide assumes you are setting up a voting node for the first
-time. You will need:
+This guide assumes you have already setup your voting node. You will need:
 
-- 100 HTA.
-- A little extra HTA for registration transactions: 1-5 HTA
-- Historia Core Wallet v0.17.0.2 or later to store your Historia. You can get this here https://github.com/HistoriaOffical/historia/releases/
-- A computer running Windows, MacOS, or Linux.
+- Historia Core Wallet v0.17.0.3 or later to store your Historia. You can get this here: https://github.com/HistoriaOffical/historia/releases/
+- A voting node previously setup.
+- A computer running Windows, MacOS, or Linux. 
+- The Historia Local Web Application Software. You can get this here: https://github.com/HistoriaOffical/Historia-Local-Web-Application/releases/
 
 In this guide, we will assume you will be working from a Windows computer. However, alternative steps for using MacOS or Linux will be indicated where necessary.
 
 Voting Node Requirements
 ------------------------
 
-The Historia developers have tried to make this process as simple as possible for the users. The following requirements are required to setup a voting node.
- - Voting Node 
- 
-   - Collateral Requirement: 100 HTA
-   - A little extra HTA for registration transactions: 1-5 HTA 
-   - Internet access on home network.
-   - A computer running Windows or Linux. MacOS coming soon.
 
-In this guide, we will setup a Voting Node with collateral of 100. If you are looking to setup a Content Distribution Masternode with collateral of 5000 please see the appropriate guide for that.
+Setup the Historia Core for Local Web Application Access
+========================================================
 
-Setup a Voting Node
-=====================
+Open the Historia Core wallet config file, historia.conf. For different operating 
+systems, the Historiacore folder and the historia.conf file can be found in the following locations.
+
++-----------+--------------------------------------------------------+--------------------------------------------+
+| Platform  | Path                                                   | Shortcut                                   |
++===========+========================================================+============================================+
+| Linux     | /home/yourusername/.historiacore                       | ~/.historiacore                            | 
++-----------+--------------------------------------------------------+--------------------------------------------+
+| OSX       | /Macintosh HD/Library/Application Support/HistoriaCore | ~/Library/Application Support/HistoriaCore |
++-----------+--------------------------------------------------------+--------------------------------------------+
+| Windows   | C:\Users\yourusername\AppData\Roaming\Historia Core    | %APPDATA%\Historia Core                    |
++-----------+--------------------------------------------------------+--------------------------------------------+
+
+Setup RPC access in the config file
+-------------------------------------
+
+Once the historia.conf file is open add the following lines to the historia.conf config file::
+
+  rpcuser=<SomeUsername>
+  rpcpassword=<SomePassword>
+  rpcport=10100
+  rpcthreads=8
+  rpcallowip=127.0.0.1
+  server=1
+
+Setup the Web Application
+=========================
 
 Before you begin, please have the required HTA in your wallet. After you have the 
 required HTA in your wallet you can begin to setup a Voting Node. This guide 
