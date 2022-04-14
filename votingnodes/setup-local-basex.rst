@@ -72,6 +72,8 @@ Add your Historia Core Client information that you used in the historia.conf fil
 
 Add IPFS gateway information with the proper port (ie 443). You can choose any IPFS gateway. Click the "Test Connection to IPFS Server" button. If the connection is successful you will see a Sucess message, as seen below.
 
+Onnce the Historia Core Client and IPFS Gateway are setup, hit the save button to save all settings.
+
 The Historia Local Web Application is now setup. If you want to use the Historia Local Web Application for voting, you have to setup your voting keys. Follow the Web App voting guide. It is the same process. https://docs.historia.network/en/latest/governance/basex.html
 
 
