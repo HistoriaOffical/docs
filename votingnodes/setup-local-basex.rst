@@ -16,7 +16,7 @@ Before you begin
 This guide assumes you have already setup your voting node. You will need:
 
 - Historia Core Wallet v0.17.0.3 or later to store your Historia. You can get this here: https://github.com/HistoriaOffical/historia/releases/
-- A voting node previously setup.
+- A masternode or voting node previously setup. You can learn to setup this up here: https://docs.historia.network/en/latest/votingnodes/index.html
 - A computer running Windows, MacOS, or Linux. 
 - The Historia Local Web Application Software. You can get this here: https://github.com/HistoriaOffical/Historia-Local-Web-Application/releases/
 
@@ -39,7 +39,7 @@ systems, the Historiacore folder and the historia.conf file can be found in the 
 +-----------+--------------------------------------------------------+--------------------------------------------+
 | OSX       | /Macintosh HD/Library/Application Support/HistoriaCore | ~/Library/Application Support/HistoriaCore |
 +-----------+--------------------------------------------------------+--------------------------------------------+
-| Windows   | C:\Users\yourusername\AppData\Roaming\Historia Core    | %APPDATA%\Historia Core                    |
+| Windows   | C:\\Users\\yourusername\\AppData\\Roaming\\Historia Core    | %APPDATA%\Historia Core                    |
 +-----------+--------------------------------------------------------+--------------------------------------------+
 
 Setup RPC access in the config file
