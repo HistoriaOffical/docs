@@ -39,7 +39,7 @@ systems, the Historiacore folder and the historia.conf file can be found in the 
 +-----------+--------------------------------------------------------+--------------------------------------------+
 | OSX       | /Macintosh HD/Library/Application Support/HistoriaCore | ~/Library/Application Support/HistoriaCore |
 +-----------+--------------------------------------------------------+--------------------------------------------+
-| Windows   | C:escape("\")Users\yourusername\AppData\Roaming\Historia Core    | %APPDATA%\Historia Core                    |
+| Windows   | C:\Users\yourusername\AppData\Roaming\Historia Core    | %APPDATA%\Historia Core                    |
 +-----------+--------------------------------------------------------+--------------------------------------------+
 
 Setup RPC access in the config file
