@@ -77,29 +77,29 @@ Once open you will see the address in the command prompt that you need to connec
 
 Copy this address and paste it into your browser. This will open the web application in your browser. If it is your first time, it will take you to the setup screen, as seen below.
 
-.. figure:: ../img/WL-1.png
+.. figure:: ../img/WL-1.jpg
    :width: 400px
 
 
 Add your Historia Core Client information that you used in the historia.conf file. and click the "Test Connection to Historia Client" button. If the connection is successful you will see a Sucess message, as seen below.
 
 
-.. figure:: ../img/WL-2.png
+.. figure:: ../img/WL-2.jpg
    :width: 400px
 
 Add IPFS gateway information with the proper port (ie 443). You can choose any IPFS gateway. Click the "Test Connection to IPFS Server" button. If the connection is successful you will see a Sucess message, as seen below.
 
-.. figure:: ../img/WL-3.png
+.. figure:: ../img/WL-3.jpg
    :width: 400px
 
 Onnce the Historia Core Client and IPFS Gateway are setup, hit the save button to save all settings.
 
-.. figure:: ../img/WL-4.png
+.. figure:: ../img/WL-4.jpg
    :width: 400px
 
 The Historia Local Web Application is now setup and you can browse the proposals and records, as seen below.
 
-.. figure:: ../img/WL-5.png
+.. figure:: ../img/WL-5.jpg
    :width: 400px
 
 If you want to use the Historia Local Web Application for voting, you have to setup your voting keys. Follow the Web App voting guide. It is the same process. https://docs.historia.network/en/latest/governance/basex.html
