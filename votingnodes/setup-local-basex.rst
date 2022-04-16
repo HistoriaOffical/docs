@@ -61,20 +61,48 @@ Setup the Web Application
 
 If you haven't already, download the Historia Local Web Application for your platoform. You can get this here: https://github.com/HistoriaOffical/Historia-Local-Web-Application/releases/
 
+Unzip the directory on to your desktop or location where you want it to run from.
+
 Open the Historia-Local-Web-App executable by double clicking on the icon, as seen below.
+
+.. figure:: ../img/WL-00.png
+   :width: 400px
+
+
 
 Once open you will see the address in the command prompt that you need to connect to, as seen below.
 
+.. figure:: ../img/WL-000.png
+   :width: 400px
+
 Copy this address and paste it into your browser. This will open the web application in your browser. If it is your first time, it will take you to the setup screen, as seen below.
+
+.. figure:: ../img/WL-1.png
+   :width: 400px
+
 
 Add your Historia Core Client information that you used in the historia.conf file. and click the "Test Connection to Historia Client" button. If the connection is successful you will see a Sucess message, as seen below.
 
 
+.. figure:: ../img/WL-2.png
+   :width: 400px
+
 Add IPFS gateway information with the proper port (ie 443). You can choose any IPFS gateway. Click the "Test Connection to IPFS Server" button. If the connection is successful you will see a Sucess message, as seen below.
+
+.. figure:: ../img/WL-3.png
+   :width: 400px
 
 Onnce the Historia Core Client and IPFS Gateway are setup, hit the save button to save all settings.
 
-The Historia Local Web Application is now setup. If you want to use the Historia Local Web Application for voting, you have to setup your voting keys. Follow the Web App voting guide. It is the same process. https://docs.historia.network/en/latest/governance/basex.html
+.. figure:: ../img/WL-4.png
+   :width: 400px
+
+The Historia Local Web Application is now setup and you can browse the proposals and records, as seen below.
+
+.. figure:: ../img/WL-5.png
+   :width: 400px
+
+If you want to use the Historia Local Web Application for voting, you have to setup your voting keys. Follow the Web App voting guide. It is the same process. https://docs.historia.network/en/latest/governance/basex.html
 
 
 Multiple Masternode / Voting Nodes
