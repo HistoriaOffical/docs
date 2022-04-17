@@ -130,16 +130,25 @@ Trouble Shooting
 ----------------------------------------------
 
 1. Can not connect to Historia Core Client 
+   
    - Check to make sure Historia Core Client is running.
+   
    - Check to make sure that your historia.conf configure file has the correct rpc settings
 2. Can not connect to IPFS Gateway
+   
    - Check to make sure you have a valid IPFS server in the settings page.
+   
    - Check to verify the port is set properly. This is normally port 443.
 3. No records or proposals are seen.
+   
    - Make sure that the Historia Core Client is synced completely.
+   
    - Make sure that you have a valid IPFS Gateway server.
 4. Voting Issues
+   
    - Have you added your masternode / voting nodes to Historia Local Web app? 
+   
    - Multiple Masternodes / Voting Nodes must have all the same password.
+   
    - Make sure you have updated your registered masternode / voting node in the Historia Local Web Application with your **VotingAddressPrivateKey**. Follow the Web App voting guide `here <https://docs.historia.network/en/latest/governance/basex.html>`_ again.
 
