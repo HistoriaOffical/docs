@@ -1,21 +1,21 @@
 .. meta::
-   :description: This guide describes how to set your voting keys on the Web App
-   :keywords: historia, guide, voting keys, setup, Web App
+   :description: This guide describes how to set your voting keys on the Web App or Local Web App
+   :keywords: historia, guide, voting keys, setup, Web App, Local Web App
 
 .. _basex-setup:
 
 ==========================================
-Using the Web App for Voting
+Using the Web App or Local Web App for Voting
 ==========================================
 
-Setting up Web App with your voting keys requires a basic understanding of how to use Historia GUI Wallet and a website.
+Setting up Web App or Local Web App with your voting keys requires a basic understanding of how to use Historia GUI Wallet and a website.
 
 https://historia.network/
 
 Before you begin
 ================
 
-This guide assumes you are setting up your voting keys on Web App. This assumes that you have already setup your masternode or voting node previously. If you have not setup your masternode or voting node, please do that before you use this guide.
+This guide assumes you are setting up your voting keys on Web App or Local Web App. This assumes that you have already setup your masternode or voting node previously. If you have not setup your masternode or voting node, please do that before you use this guide.
 
 
 Get Your Voting Private Key
@@ -47,13 +47,13 @@ The output will look something like this: ::
     "payoutAddress": "HPi1Q925T7BjHhWndWTh5w3xvZqw5AZ7oi",
     "pubKeyOperator": "1098e4f499307c4931d6d01438efe811d670226eb1e715e4ed91e78124b32c6dcd636540dc980e0cdc7272d3406ef5cb"
 
-Find your **votingAddress**, **collateralHash**, **collateralIndex**. These will be needed to register your masternode in Web App. In this example it is: ::
+Find your **votingAddress**, **collateralHash**, **collateralIndex**. These will be needed to register your masternode in Web App or Local Web App. In this example it is: ::
 
     "votingAddress": "HTTM4QbcGiWAWtcJB9g22meoYupHnErcyo",
     "collateralHash": "849bce016be646c7844587981cab8a3f64148434d20c637a3d8c4a0cc579f056",
     "collateralIndex": 1,
     
-This next command is important to understand what exactly is happening. Normally you should NEVER run the dumpprivkey command and give the output to a third party. But in the one instance this is safe. There should not be any coins associated with this address. The votingAddress private key is required to use Web App for voting. During the setup of your private key into Web App you will encrypt this within the Web App application and even if the database is hacked, private voting keys will not be lost.
+This next command is important to understand what exactly is happening. Normally you should NEVER run the dumpprivkey command and give the output to a third party. But in the one instance this is safe. There should not be any coins associated with this address. The votingAddress private key is required to use Web App or Local Web App for voting. During the setup of your private key into Web App or Local Web App you will encrypt this within the Web App or Local Web App application and even if the database is hacked, private voting keys will not be lost.
 Alternatively you can just use the HistoriaCore GUI Wallet to vote.
 
 Using the previous **votingAddress** as an example we can now get the private key of the voting address in the debug console type in. Please use your own **votingAddress** key below: ::
@@ -64,10 +64,10 @@ Output: ::
 
    cSh24QcuT<REMOVED FOR PRIVACY>
 
-Add your voting address private key to Web App
-----------------------------------------------
+Add your voting address private key to Web App or Local Web App
+---------------------------------------------------------------
 
-After you have registered your user on Web App (https://historia.network/) 
+After you have registered your user on Web App (https://historia.network/). Note: If you are using the Historia Local Web App you do not need to register an account. 
 
 Login to the Web App application and go to Masternodes->My Masternode, as seen below.
 
