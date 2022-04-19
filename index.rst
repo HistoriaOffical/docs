@@ -52,5 +52,5 @@ Contents
    votingnodes/index
    masternodes/index
    governance/basex.rst
-
+   votingnodes/setup-local-basex.rst
    
