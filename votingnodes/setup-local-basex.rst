@@ -19,7 +19,7 @@ This guide assumes you have already setup your voting node. You will need:
 
 - A computer running Windows, MacOS, or Linux. 
 - The Historia Local Web Application Software. You can get this `here <https://github.com/HistoriaOffical/Historia-Local-Web-Application/releases/>`_.
-- (Optional) A masternode or voting node previously setup if you want to use Historia Local Web App for voting. You can learn to setup a masternode `here <https://docs.historia.network/en/latest/votingnodes/index.html>`_ or a voting node `here <https://docs.historia.network/en/latest/masternodes/index.html>`_.
+- (Optional) A masternode or voting node previously setup if you want to use Historia Local Web App for voting. You can learn to setup a voting node  `here <https://docs.historia.network/en/latest/votingnodes/index.html>`_ or a masternode `here <https://docs.historia.network/en/latest/masternodes/index.html>`_.
 
 In this guide, we will assume you will be working from a Windows computer. However, alternative steps for using MacOS or Linux will be indicated where necessary.
 
