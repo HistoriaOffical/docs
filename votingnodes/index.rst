@@ -29,5 +29,5 @@ pages for information on how to set up a voting node.
 
    understanding.rst
    setup.rst
-   setup-local-basex.rst
+  
  
