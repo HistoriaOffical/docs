@@ -57,7 +57,7 @@ Save the historia.conf file, and start or restart the Historia Core Client if it
 Setup the Web Application
 =========================
 
-If you haven't already, download the Historia Local Web Application for your platoform. You can get this `here
+If you haven't already, download the Historia Local Web Application for your platform. You can get this `here
 <https://github.com/HistoriaOffical/Historia-Local-Web-Application/releases/>`_.
 
 Unzip the directory on to your desktop or location where you want it to run from. If in Linux untar instead of zip.
