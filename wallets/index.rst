@@ -58,24 +58,6 @@ Available documentation:
    
    Historia Core Wallet
 
-.. _historia-android-wallet:
 
-Historia Android Wallet
-===================
-
-Historia offers a standalone wallet for Android, with development supported 
-by the Historia budget. The Historia Android Wallet supports advanced Historia 
-features, including contact management and InstantSend. You can scan and 
-display QR codes for quick transfers, backup and restore your wallet, 
-keep an address book of frequently used addresses, pay with NFC, sweep 
-paper wallets and more.
-
-.. toctree::
-   :includehidden:
-   :maxdepth: 1
-
-   android/installation.rst
-
-*Historia Android Wallet*
 
 
