@@ -16,8 +16,9 @@ Before you begin
 This guide assumes you have already setup your voting node. You will need:
 
 - Historia Core Wallet v0.17.0.3 or later to store your Historia. You can get this `here <https://github.com/HistoriaOffical/historia/releases/tag/0.17.0.3>`_.
-
+- .NET Core Libary for your Operating System. You can get this `here <https://dotnet.microsoft.com/en-us/download/dotnet/3.1>`_.
 - A computer running Windows, MacOS, or Linux. 
+
 - The Historia Local Web Application Software. You can get this `here <https://github.com/HistoriaOffical/Historia-Local-Web-Application/releases/>`_.
 - (Optional) A masternode or voting node previously setup if you want to use Historia Local Web App for voting. You can learn to setup a voting node  `here <https://docs.historia.network/en/latest/votingnodes/index.html>`_ or a masternode `here <https://docs.historia.network/en/latest/masternodes/index.html>`_.
 
