@@ -69,12 +69,18 @@ Open the HistWeb.exe executable by double clicking on the icon, as seen below.
    :width: 600px
 
 
-If in Linux or OSX before you can run the Historia Local Web Application you must set the file to have executable permissions then to run in Linux or OSX:
+If in Linux before you can run the Historia Local Web Application you must set the file to have executable permissions then to run in Linux:
 
 ::
 
   chmod +x HistWeb
   ./HistWeb
+
+To run the Historia Local Web Application in OSX:
+
+::
+
+  dotnet HistWeb.dll
 
 
 Once run the application you will see the local address in the command prompt that you need to connect to, as seen below.
