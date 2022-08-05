@@ -136,11 +136,13 @@ After selecting the "Send Page to ..." option, go back to the Archive page. Depe
 Trouble Shooting
 ----------------------------------------------
 
-1. Historia Network main web application (https://historia.network) archive page does not import page.
+1. Historia Network main web application (https://historia.network) archive page does not import page
+
    - Regenerate your API Key (https://historia.network/apikeys)
    - Save regenerated API Key in the Historia Network Browser Extension
    - Verify that you are using the "Send Page to Historia Network (Live)" option.
-2. HLWA archive page does not import page.
+2. HLWA archive page does not import page
+
    - Restart Browser
    - Restart the HLWA app on your local machine
    - Verify that you are using the "Send Page to Historia Network (Local)" option.
