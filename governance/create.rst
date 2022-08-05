@@ -105,11 +105,7 @@ After choosing the Archive option, it will pull up the Create Builder screen, bu
    :width: 400px
    
 
-After installing the browser extension you will see the following prompt when opening up the Archive page.
-
-.. figure:: /img/c9.png
-   :width: 400px
-   
+ 
 
 If using the Historia Local Web Application (HLWA) you are ready to import and Archive. If you are using the Historia Network main web application (https://historia.network), you must setup your API Key for the browser extension to be able to import. To setup your API Key, go to https://historia.network/apikeys and click the generate button. It will produce your individual API key as seen below.
 
@@ -118,12 +114,17 @@ If using the Historia Local Web Application (HLWA) you are ready to import and A
    
 After you have setup your API Key in the Historia Network main web application, you must set the API Key in the Historia Network Browser Extension. Right click on the Historia Network Browser Externsion and open the Options menu. This will bring up the settings for the extension as seen below.
 
+
 .. figure:: /img/c14.png
+   :width: 400px  
+   
+   
+Paste in your API Key into the Historia Network API Key field and close the settings tab. Your API Key has now been setup. After installing and have setup your API Key go back to the Archive page. You will see the following prompt when opening up the Archive page.
+
+.. figure:: /img/c9.png
    :width: 400px
-   
-   
-   
-   
- Paste in your API Key into the Historia Network API Key field and close the settings tab. Your API Key has now been setup.
- 
+
+
+When that prompt is show in either the HLWA or the Historia Network main web application (https://historia.network) open a new tab in your browser of a page that you want to import into the archive page. Right click on the page and go to Historia Network in the dialog menu, either select the "Send Page to Historia Network (Live)" if you want to use the main web application or "Send Page to Historia Network (Local)". If you choose the local version, the HLWA must also be running first.
+
  
