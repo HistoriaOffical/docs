@@ -16,8 +16,8 @@ Before you begin
 This guide assumes you have already setup an account on the https://historia.network web application or have already setup your Historia Local Web Application (HLWA). If you haven't done one of those things, please do that before you use this guide.
 
 
-How to use the Create system
-----------------------------
+How to use the Create system (Record or Proposal)
+-------------------------------------------------
 
 The Historia Network developers have tried to make this process as simple as possible for the users.
 
@@ -25,20 +25,21 @@ After you have registered your user on Web App (https://historia.network/). Note
 
 Login to the Web App application and go to Create, as highlighted below.
 
-.. figure:: /img/bx1.png
-   :width: 400px
+.. figure:: /img/c1.png
+   :width: 600px
+
 
 Click on the Create button, as highlighted below.
 
-.. figure:: /img/bx2.png
-   :width: 400px
-   
+.. figure:: /img/c2.png
+   :width: 600px
+
+
 Once you click on Create, the web application will ask you which type of object you would like the create. Please choose one of the options.
 
-.. figure:: /img/bx3.png
+.. figure:: /img/cX.png
    :width: 400px
    
-
 The options available:
 
 Proposal - This is a temporary object that makes a suggestion to the network. This could be an idea for future development or a user requested payment for some idea the user wants to implement themselves, such as a new template, marketing, or other services that will help to grow the Historia Network. If a proposal passes, the user will receive payment and the proposal object will eventually be deleted from the network after the expiration date.
@@ -47,19 +48,18 @@ Record - This is a permanent object such as a historical event or something that
 
 Archive - An archive is a subset of a record object with the same behavior from a voting perpsective with regards to blockchain locks. When choosing an archive object, this will trigger functionality within the web application to archive an external web page
 
+If you choose a Proposal or Record object you will be asked if you would like to import a template to work off of, as seen below. 
 
-
-.. figure:: /img/bx4.png
+.. figure:: /img/c4.png
    :width: 400px
 
-If you choose a Proposal or Record object you will be asked if you would like to import a template to work off of, as seen below:: 
-
-.. figure:: /img/bx4.png
-   :width: 400px
 
 It is recommended that you use a template, unless you have enough skill to create a custom page.
 
 Once it loads the Create Builder interface there is much going on here as seen below
+
+.. figure:: /img/c5.png
+   :width: 600px
 
 Key for above screen shot:
 
@@ -79,13 +79,51 @@ Key for above screen shot:
 14. Delete Draft - This button will delete this draft.
 15. Submit Button - Once you are complete and are ready to submit your object for a vote hit this button. Note, after you hit this button you will not be able to make changes.
 
+
 After you hit the submit button, you will be asked for payment for your object as seen below.
 
-.. figure:: /img/bx4.png
+.. figure:: /img/c6.png
    :width: 400px
+
 
 After the payment is received your object has been submitted to the network. It may take up to 1 hour for the blockchain to process and sync your object for vote.
 
-.. figure:: /img/bx4.png
-   :width: 400px
+.. figure:: /img/c7.png
+   :width: 600px
 
+
+How to use the Create system (Archive)
+--------------------------------------
+Once you click on Create, the web application will ask you which type of object you would like the create. In this case choose the Archive option.
+
+.. figure:: /img/cX.png
+   :width: 400px
+   
+After choosing the Archive option, it will pull up the Create Builder screen, but slightly different than above. If you have not yet installed the Historia Network Browser Extension you will see the screen below. You can learn how to install the browser extension `here <https://github.com/HistoriaOffical/SingleFileHistoria>`_. 
+
+.. figure:: /img/c10.png
+   :width: 400px
+   
+
+After installing the browser extension you will see the following prompt when opening up the Archive page.
+
+.. figure:: /img/c9.png
+   :width: 400px
+   
+
+If using the Historia Local Web Application (HLWA) you are ready to import and Archive. If you are using the Historia Network main web application (https://historia.network), you must setup your API Key for the browser extension to be able to import. To setup your API Key, go to https://historia.network/apikeys and click the generate button. It will produce your individual API key as seen below.
+
+.. figure:: /img/c12.png
+   :width: 600px
+   
+After you have setup your API Key in the Historia Network main web application, you must set the API Key in the Historia Network Browser Extension. Right click on the Historia Network Browser Externsion and open the Options menu. This will bring up the settings for the extension as seen below.
+
+.. figure:: /img/c14.png
+   :width: 400px
+   
+   
+   
+   
+ Paste in your API Key into the Historia Network API Key field and close the settings tab. Your API Key has now been setup.
+ 
+ 
