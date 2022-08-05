@@ -127,9 +127,21 @@ Paste in your API Key into the Historia Network API Key field and close the sett
 
 When that prompt is show in either the HLWA or the Historia Network main web application (https://historia.network) open a new tab in your browser of a page that you want to import into the archive page. Right click on the page and go to Historia Network in the dialog menu, either select the "Send Page to Historia Network (Live)" if you want to use the main web application or "Send Page to Historia Network (Local)". If you choose the local version, the HLWA must also be running first.
 
-After selecting the "Send Page to ..." option, go back to the Archive page. Depending on the complexity of the page in question this can take a few seconds to import. View the imported page below
+After selecting the "Send Page to ..." option, go back to the Archive page. Depending on the complexity of the page in question this can take a few seconds to import. View the imported page below.
 
 .. figure:: /img/c16.png
-   :width: 600px
+   :width: 400px
+   
+   
+Trouble Shooting
+----------------------------------------------
 
- 
+1. Historia Network main web application (https://historia.network) archive page does not import page.
+   - Regenerate your API Key (https://historia.network/apikeys)
+   - Save regenerated API Key in the Historia Network Browser Extension
+   - Verify that you are using the "Send Page to Historia Network (Live)" option.
+2. HLWA archive page does not import page.
+   - Restart Browser
+   - Restart the HLWA app on your local machine
+   - Verify that you are using the "Send Page to Historia Network (Local)" option.
+
