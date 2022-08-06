@@ -89,7 +89,7 @@ After you hit the submit button, you will be asked for payment for your object a
 After the payment is received your object has been submitted to the network. It may take up to 1 hour for the blockchain to process and sync your object for vote.
 
 .. figure:: /img/c7.png
-   :width: 700px
+   :width: 400px
 
 
 How to use the Create system (Archive)
