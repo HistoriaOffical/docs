@@ -17,7 +17,7 @@ This guide assumes you have already setup an account on the https://historia.net
 
 
 How to use the Create system (Record or Proposal)
--------------------------------------------------
+=================================================
 
 The Historia Network developers have tried to make this process as simple as possible for the users.
 
@@ -102,7 +102,7 @@ After the payment is received your object has been submitted to the network. It 
 
 
 How to use the Create system (Archive)
---------------------------------------
+======================================
 Once you click on Create, the web application will ask you which type of object you would like the create. In this case choose the Archive option.
 
 .. figure:: /img/cX.png
