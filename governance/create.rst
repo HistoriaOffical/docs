@@ -115,7 +115,6 @@ After choosing the Archive option, it will pull up the Create Builder screen, bu
    
 
  
-
 If using the Historia Local Web Application (HLWA) you are ready to import and Archive. If you are using the Historia Network main web application (https://historia.network), you must setup your API Key for the browser extension to be able to import. To setup your API Key, go to https://historia.network/apikeys and click the generate button. It will produce your individual API key as seen below.
 
 .. figure:: /img/c12.png
@@ -141,7 +140,8 @@ After selecting the "Send Page to ..." option, go back to the Archive page. Depe
 .. figure:: /img/c16.png
    :width: 400px
    
-   
+It should be noted that for some pages it is not possible to take a screen shot and only the HTML version or the archive will be available in the Preview area. If this occurs, you can still submit the HTML version of the Archive as an object.
+
 Trouble Shooting
 ----------------------------------------------
 
