@@ -5,7 +5,7 @@
 .. _masternode-setup:
 
 ===================================================================
-Setup For Linux
+Setup For Linux (CURRENTLY OUTDATE WE ARE WORKING ON A UPDATE)
 ===================================================================
 
 Setting up a masternode requires a basic understanding of Linux and blockchain technology, as well as an ability to follow instructions closely. It also requires regular maintenance and careful security. There are some decisions to be made along the way, and optional extra steps to take for increased security.
@@ -254,8 +254,8 @@ Historia requires a DNS name set to enabled SSL for your IPFS node that will be 
 
 Remember that if you live in a oppressive country, your name will be associated with your DNS record in the global WHOIS database. Some DNS providers such as ionos.com will give a DNS name privacy for free with domain registration. But they would still be required to hand over your domain name information via court order. Another option is using one of the new blockchain DNS systems such as unstoppabledomains.com, and using crypto currency to purchase your domain name. However we have not tested using a blockchain DNS system yet.
 
-Send the collateral
-===================
+Send the collateral from Historia Core Desktop Wallet
+=====================================================
 
 A Historia address with a single unspent transaction output (UTXO) of
 exactly 5000 HTA is required to operate a Voting Masternode. Once it has been
@@ -263,8 +263,8 @@ sent, various keys regarding the transaction must be extracted for later
 entry in a configuration file. A masternode can be started from the official 
 wallet. This guide will describe the steps for Historia Core.
 
-Option 1: Sending from Historia Core wallet
--------------------------------------------
+Option 1: Sending from Historia Core Desktop Wallet
+---------------------------------------------------
 
 Open Historia Core wallet and wait for it to synchronize with the network.
 It should look like this when ready:
@@ -307,8 +307,8 @@ Core on your VPS.
 
 .. _masternode-setup-install-historiacore:
 
-Install Historia Core on VPS
-============================
+Install Historia Core on Ubuntu VPS
+===================================
 You MUST use Historia v0.17.0.4 or later, otherwise this process will fail. https://github.com/HistoriaOffical/historia/releases/
 
 Historia Core is the software behind both the Historia Core GUI wallet and Historia
@@ -318,8 +318,8 @@ masternodes. If not displaying a GUI, it runs as a daemon on your VPS
 Open PuTTY or a console again and connect using the username and
 password you just created for your new, non-root user. 
 
-Option 1: Manual installation
------------------------------
+Option 1: Manual installation of Historia Core on Ubuntu VPS
+------------------------------------------------------------
 
 To manually download and install the components of your Historia masternode, visit https://github.com/HistoriaOffical/historia/releases/ on your computer to find the link to the latest Historia Core wallet.  Right-click on Download TGZ for Historia Core Linux 64 Bit and select Copy link address. Go back to your terminal window and enter the following command, pasting in the address to the latest version of Historia Core by right clicking or pressing Ctrl + V::
 
@@ -384,8 +384,8 @@ Leave the masternode and masternodeblsprivkey fields commented out for now. The 
 Press **Ctrl + X** to close the editor and **Y** and **Enter** save the
 file. 
 
-Start Historiad Masternode
---------------------------
+Start Historiad Masternode on Ubuntu VPS
+----------------------------------------
 
 You can now start running Historia on the masternode to begin
 synchronization with the blockchain::
@@ -440,11 +440,11 @@ response::
 
 Continue with the next step to install IPFS required by your masternode. Running the IPFS daemon is now a required part of the masternode system. You must follow these steps. 
 
-Setup IPFS 
-==========
+Setup IPFS on Ubuntu VPS
+========================
 
-Download / Install IPFS Daemon
-------------------------------
+Download / Install IPFS Daemon on Ubuntu VPS
+--------------------------------------------
 
 To run the IPFS Daemon you must install the Go Lang::
 
@@ -461,14 +461,14 @@ Clean up::
 
    rm -rf go-ipfs/
    
-Initialize IPFS Daemon for Historia
------------------------------------
+Initialize IPFS Daemon for Historia on Ubuntu VPS
+-------------------------------------------------
 Since we will be using IPFS only for Historia, we can safely run the initialization::
    
    ipfs init -p server
    
-Remove Original Bootstap IPFS Nodes and Connect to Historia IPFS Swarm
-----------------------------------------------------------------------
+Remove Original Bootstap IPFS Nodes and Connect to Historia IPFS Swarm on Ubuntu VPS
+------------------------------------------------------------------------------------
 Add Historia IPFS bootstrap nodes, configure our IPFS node, and only connect to the Historia IPFS Swarm::
 
    ipfs bootstrap add /ip4/202.182.119.4/tcp/4001/ipfs/QmVjkn7yEqb3LTLCpnndHgzczPAPAxxpJ25mNwuuaBtFJD
@@ -490,8 +490,8 @@ Add Historia IPFS bootstrap nodes, configure our IPFS node, and only connect to 
    
 Now when you start IPFS, the IPFS daemon will now connect to the Historia IPFS swarm when started.
 
-Create IPFS Service To Restart on Reboot or Crash
--------------------------------------------------
+Create IPFS Service To Restart on Reboot or Crash on Ubuntu VPS
+---------------------------------------------------------------
 Next, create a service for IPFS to restart on reboot or crash. Create a new service file::
    
    sudo nano  /etc/systemd/system/ipfs.service
@@ -517,8 +517,8 @@ Copy and past the below config and save the ipfs.service file. Add the username 
    WantedBy=multi-user.target
       
 
-Start IPFS Daemon for Historia
-------------------------------
+Start IPFS Daemon for Historia on Ubuntu VPS
+--------------------------------------------
 Start the IPFS service::
 
    systemctl start ipfs
@@ -531,8 +531,8 @@ Check the IPFS service is running::
 
    systemctl status ipfs
 
-Get IPFS Peer ID
-----------------
+Get IPFS Peer ID on Ubuntu VPS
+------------------------------
 Historia needs the IPFS ID generated by the IPFS initialization command in masternode registration command below. Run this command and save the ID value for later::
 
    ipfs id
@@ -550,8 +550,8 @@ Result::
       "ProtocolVersion": "ipfs/0.1.0"
    }
    
-Check IPFS is connected to Historia Swarm
------------------------------------------
+Check IPFS is connected to Historia Swarm on Ubuntu VPS
+-------------------------------------------------------
 To verify that IPFS is connect to the correct swarm::
 
    ipfs swarm peers
@@ -566,8 +566,8 @@ Output::
 
 You will see at least these peers and many more.
 
-Nginx Web Proxy 
----------------
+Nginx Web Proxy on Ubuntu VPS
+-----------------------------
 
 After setting up IPFS, Nginx proxy and a DNS entry is needed to be setup::
    
@@ -576,8 +576,8 @@ After setting up IPFS, Nginx proxy and a DNS entry is needed to be setup::
 Go to the ip address of your VPS in a web browser to verify that Nginix is running.
 
 
-Install SSL Certificate
------------------------
+Install SSL Certificate on Ubuntu VPS
+-------------------------------------
 In this example we will be using the free SSL certificate service Let's Encrypt to create and install our SSL certificate. First we must install the Let's Encrypt Certbot. Note YOU MUST keep TCP 80 open to get and maintain a valid SSL certificate::
 
    sudo snap install core; sudo snap refresh core
@@ -664,8 +664,8 @@ operated. These changes and the three keys required for the different
 masternode roles are described briefly under :ref:`dip3-changes` in this
 documentation.
 
-Option 1: Registering from Historia Core wallet
------------------------------------------------
+Option 1: Registering from Historia Core Desktop Wallet
+-------------------------------------------------------
 
 Identify the funding transaction
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -688,8 +688,8 @@ is the ``collateralIndex``.
 
 .. _bls-generation:
 
-Generate a BLS key pair
-^^^^^^^^^^^^^^^^^^^^^^^
+Generate a BLS key pair on Historia Core Desktop Wallet
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A public/private BLS key pair is required to operate a masternode. The
 private key is specified on the masternode itself, and allows it to be
@@ -714,8 +714,8 @@ Debug console** and entering the following command::
 similar to the value provided in the past by the** ``masternode genkey``
 **command.**
 
-Add the private key to your masternode configuration
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Add the private key to your masternode configuration on Ubuntu VPS
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The public key will be used in following steps. The private key must be
 entered in the ``historia.conf`` file on the masternode. This allows the
@@ -747,8 +747,8 @@ to give Historia Core time to shut down::
 We will now prepare the transaction used to register the masternode on
 the network.
 
-Prepare a ProRegTx transaction
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Prepare a ProRegTx transaction on Historia Core Desktop Wallet
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A pair of BLS keys for the operator were already generated above, and
 the private key was entered on the masternode. The public key is used in
@@ -799,7 +799,8 @@ following commands. Unlock your wallet for 5 minutes::
   walletpassphrase yourSecretPassword 300
 
 We will now prepare an unsigned ProRegTx special transaction using the
-``protx register_prepare`` command. This command has the following
+``protx 
+`` command. This command has the following
 syntax::
 
   protx register_prepare collateralHash collateralIndex ipAndPort ownerKeyAddr 
@@ -844,6 +845,8 @@ Example (remove line breaks if copying)::
     masternode1.historia.network
     HQyqm7srzV7nYhGLjuzTzjBs452suStCQW
 
+After you have created the protx register_prepare command copy and paste this into the Historia Core Desktop Wallet debug dialog box that you have been working on from your desktop.
+
 Output::
 
   {
@@ -856,8 +859,8 @@ Next we will use the ``collateralAddress`` and ``signMessage`` fields to
 sign the transaction, and the output of the ``tx`` field to submit the
 transaction.
 
-Sign the ProRegTx transaction
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sign the ProRegTx transaction on Historia Core Desktop Wallet
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 We will now sign the content of the ``signMessage`` field using the
 private key for the collateral address as specified in
@@ -878,8 +881,8 @@ Output::
   II8JvEBMj6I3Ws8wqxh0bXVds6Ny+7h5HAQhqmd5r/0lWBCpsxMJHJT3KBcZ23oUZtsa6gjgISf+a8GzJg1BfEg=
 
 
-Submit the signed message
-^^^^^^^^^^^^^^^^^^^^^^^^^
+Submit the signed message on Historia Core Desktop Wallet
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 We will now submit the ProRegTx special transaction to the blockchain to
 register the masternode. This command must be sent from a Historia Core
