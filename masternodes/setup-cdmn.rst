@@ -649,6 +649,7 @@ Change your nginx configuration file to look something like this::
     listen [::]:80 default_server;
     server_name example.com;
     return 404; # managed by Certbot
+   }
 
 Save the file and restart Nginx::
 
@@ -842,7 +843,7 @@ Example (remove line breaks if copying)::
   protx register_prepare 
     16347a28f4e5edf39f4dceac60e2327931a25fdee1fb4b94b63eeacf0d5879e3 
     1 
-    45.76.230.239:19999 
+    45.76.230.239:10101 
     HTGfMbCy2X65th3L78JVyqpzhu6p1fbSC6 
     99f20ed1538e28259ff80044982372519a2e6e4cdedb01c96f8f22e755b2b3124fbeebdf6de3587189cf44b3c6e7670e 
     HDsy8GUnsdFKWrRHB8WbD4oaLvETDZ9scY 
