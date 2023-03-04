@@ -584,7 +584,6 @@ In this example we will be using the free SSL certificate service Let's Encrypt 
    sudo apt-get update
    sudo snap install --classic certbot
    sudo ln -s /snap/bin/certbot /usr/bin/certbot
-   sudo certbot --nginx
 
 Next we need to prepare Nginx configuration file for Let's Encrypt Certbot. If you're using the default configuration file /etc/nginx/sites-available/default open it with a text editor such as nano and find the server_name directive. Replace the underscore, _, with your own domain name(s)::
 
@@ -600,19 +599,8 @@ Save the file and restart Nginx::
    
 The following command will obtain a certificate for you. Edit your Nginx configuration to use it, and reload Nginx.::
 
-   sudo certbot --nginx -d example.com
+   sudo certbot --nginx
    
-If Certbot can obtain an SSL certificate, it will ask how you would like to configure your HTTPS settings. Please choose option 2 to redirect who visit your IPFS node over an unsecured connection.::
-
-   Please choose whether or not to redirect HTTP traffic to HTTPS, removing HTTP access.
-   -------------------------------------------------------------------------------
-   1: No redirect - Make no further changes to the webserver configuration.
-   2: Redirect - Make all requests redirect to secure HTTPS access. Choose this for
-   new sites, or if you're confident your site works on HTTPS. You can undo this
-   change by editing your web server's configuration.
-   -------------------------------------------------------------------------------
-   Select the appropriate number [1-2] then [enter] (press 'c' to cancel):
-
 If the setup process has gone correctly, you can now go to your domain name in a browser and it will be protected by an SSL certification. However we are not done yet.
 
 Lets finish this process and setup Nginix to point to the IPFS daemon that is running on your masternode. If you're using the default configuration file /etc/nginx/sites-available/default open it with a text editor such as nano again.::
