@@ -580,9 +580,11 @@ Install SSL Certificate
 -----------------------
 In this example we will be using the free SSL certificate service Let's Encrypt to create and install our SSL certificate. First we must install the Let's Encrypt Certbot. Note YOU MUST keep TCP 80 open to get and maintain a valid SSL certificate::
 
-   sudo add-apt-repository ppa:certbot/certbot
+   sudo snap install core; sudo snap refresh core
    sudo apt-get update
-   sudo apt-get -y install python-certbot-nginx
+   sudo snap install --classic certbot
+   sudo ln -s /snap/bin/certbot /usr/bin/certbot
+   sudo certbot --nginx
 
 Next we need to prepare Nginx configuration file for Let's Encrypt Certbot. If you're using the default configuration file /etc/nginx/sites-available/default open it with a text editor such as nano and find the server_name directive. Replace the underscore, _, with your own domain name(s)::
 
