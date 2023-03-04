@@ -308,7 +308,7 @@ Core on your VPS.
 
 Install Historia Core
 =====================
-You MUST use Historia v0.17.0.1 or later, otherwise this process will fail. https://github.com/HistoriaOffical/historia/releases/
+You MUST use Historia v0.17.0.4 or later, otherwise this process will fail. https://github.com/HistoriaOffical/historia/releases/
 
 Historia Core is the software behind both the Historia Core GUI wallet and Historia
 masternodes. If not displaying a GUI, it runs as a daemon on your VPS
@@ -323,13 +323,13 @@ Option 1: Manual installation
 To manually download and install the components of your Historia masternode, visit https://github.com/HistoriaOffical/historia/releases/ on your computer to find the link to the latest Historia Core wallet.  Right-click on Download TGZ for Historia Core Linux 64 Bit and select Copy link address. Go back to your terminal window and enter the following command, pasting in the address to the latest version of Historia Core by right clicking or pressing Ctrl + V::
 
   cd /tmp
-  wget https://github.com/HistoriaOffical/historia/releases/download/0.17.0.1/historiacore-0.17.0.1-x86_64-linux-gnu.tar.gz
+  wget https://github.com/HistoriaOffical/historia/releases/download/0.17.0.4/historiacore-0.17.0.4-x86_64-linux-gnu.tar.gz
   
 Create a working directory for Historia, extract the compressed archive and
 copy the necessary files to the directory::
 
   mkdir ~/.historiacore
-  tar xfvz historiacore-0.17.0.1-x86_64-linux-gnu.tar.gz
+  tar xfvz historiacore-0.17.0.4-x86_64-linux-gnu.tar.gz
   cp historiacore-0.17.0/bin/historiad ~/.historiacore/  
   cp historiacore-0.17.0/bin/historia-cli ~/.historiacore/  
   chmod 777 ~/.historiacore/historia*  
@@ -337,7 +337,7 @@ copy the necessary files to the directory::
 
 Clean up unneeded files::
 
-  rm historiacore-0.17.0.1-x86_64-linux-gnu.tar.gz
+  rm historiacore-0.17.0.4-x86_64-linux-gnu.tar.gz
   rm -r historiacore-0.17.0/
 
 Create a configuration file using the following command::
