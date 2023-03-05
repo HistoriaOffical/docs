@@ -293,9 +293,10 @@ you can access our funds if anything happens to your computer.
 
 Content Distribution Masternode (CDMN) - Collateral 5000
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-If setting up a Content Distribution Masternode (CDMN), send exactly 5000 HTA in a single transaction to the new address
-you generated in the previous step. This may be sent from another
-wallet, or from funds already held in your current wallet. 
+If setting up a Content Distribution Masternode (CDMN), send exactly 5000 HTA in a single transaction to the new address you generated in the previous step. This may be sent from another
+wallet, or from funds already held in your current wallet.::
+
+   sendtoaddress <YourPreviouslyGeneratedAddressHere> 5000
 
 Check Transaction
 -----------------
@@ -581,7 +582,6 @@ Install SSL Certificate on Ubuntu VPS
 In this example we will be using the free SSL certificate service Let's Encrypt to create and install our SSL certificate. First we must install the Let's Encrypt Certbot. Note YOU MUST keep TCP 80 open to get and maintain a valid SSL certificate::
 
    sudo snap install core; sudo snap refresh core
-   sudo apt-get update
    sudo snap install --classic certbot
    sudo ln -s /snap/bin/certbot /usr/bin/certbot
 
@@ -791,6 +791,10 @@ fail.::
    
    HQyqm7srzV7nYhGLjuzTzjBs452suStCQW
 
+Send a few coins to the fee source address.::
+
+   sendtoaddress HQyqm7srzV7nYhGLjuzTzjBs452suStCQW 5
+
 The private keys to the owner and fee source addresses must exist in the
 wallet submitting the transaction to the network. If your wallet is
 protected by a password, it must now be unlocked to perform the
@@ -803,8 +807,7 @@ We will now prepare an unsigned ProRegTx special transaction using the
 `` command. This command has the following
 syntax::
 
-  protx register_prepare collateralHash collateralIndex ipAndPort ownerKeyAddr 
-    operatorPubKey votingKeyAddr operatorReward payoutAddress ipfsPeerId identity (feeSourceAddress)
+  protx register_prepare collateralHash collateralIndex ipAndPort ownerKeyAddr operatorPubKey votingKeyAddr operatorReward payoutAddress ipfsPeerId identity feeSourceAddress
 
 Open a text editor such as notepad to prepare this command. Replace each
 argument to the command as follows:
