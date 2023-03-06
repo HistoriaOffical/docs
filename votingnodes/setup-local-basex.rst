@@ -15,7 +15,7 @@ Before you begin
 
 This guide assumes you have already setup your voting node. You will need:
 
-- Historia Core Wallet v0.17.0.3 or later to store your Historia. You can get this `here <https://github.com/HistoriaOffical/historia/releases/tag/0.17.0.3>`_.
+- Historia Core Wallet v0.17.0.4 or later to store your Historia. You can get this `here <https://github.com/HistoriaOffical/historia/releases/tag/0.17.0.4>`_.
 - .NET Core Libary for your Operating System. You can get this `here <https://dotnet.microsoft.com/en-us/download/dotnet/3.1>`_.
 - A computer running Windows, MacOS, or Linux. 
 
