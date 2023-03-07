@@ -110,7 +110,7 @@ Add IPFS gateway information with the proper port (ie 443). You can choose any I
    :width: 600px
 Successful connection to IPFS
 
-Add IPFS API information with the proper port (ie 5001). You can choose any IPFS API that gives you API access. It should be noted that an open IPFS API is rare and most likely you will have to setup your own IPFS server for API access. Click the "Test Connection to IPFS API Server" button. If the connection is successful you will see a Sucess message, as seen below.
+Add IPFS API information with the proper port (ie 5001). You can choose any IPFS API that gives you API access. It should be noted that an open IPFS API is rare and most likely you will have to setup your own IPFS server for API access. It should also be noted that an IPFS API server is not required for voting, but it is required to create and add a new governance object. Click the "Test Connection to IPFS API Server" button. If the connection is successful you will see a Sucess message, as seen below.
 
 .. figure:: ../img/ipfsapi.PNG
    :width: 600px
