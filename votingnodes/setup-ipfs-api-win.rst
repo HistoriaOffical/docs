@@ -69,4 +69,4 @@ Now when you start IPFS, the IPFS daemon will now connect to the Historia IPFS s
 
 After running the IPFS daemon, you should now be able to use the default address listed in the console. ::
 
-API server listening on /ip4/127.0.0.1/tcp/5001
+  API server listening on /ip4/127.0.0.1/tcp/5001
