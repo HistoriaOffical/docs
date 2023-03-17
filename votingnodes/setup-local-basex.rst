@@ -117,8 +117,8 @@ Add IPFS gateway information with the proper port (ie 443). You can choose any I
    :width: 600px
 Successful connection to IPFS
 
-Add IPFS API information with the proper port (ie 5001). You can choose any IPFS API that gives you API access. It should be noted that an open IPFS API is rare and most likely you will have to setup your own IPFS server for API access. It should also be noted that an IPFS API server is not required for voting, but it is required to create and add a new governance object. If you have setup your own masternode previously, you could open your IPFS server API port (ie 5001) via a firewall rule to your local IP address to allow for IPFS API access.  Otherwise you can setup your own IPFS API server. Follow the directions `here <https://docs.historia.network/en/latest/votingnodes/setup-ipfs-api-win.rst`_
-
+Add IPFS API information with the proper port (ie 5001). You can choose any IPFS API that gives you API access. It should be noted that an open IPFS API is rare and most likely you will have to setup your own IPFS server for API access. It should also be noted that an IPFS API server is not required for voting, but it is required to create and add a new governance object. If you have setup your own masternode previously, you could open your IPFS server API port (ie 5001) via a firewall rule to your local IP address to allow for IPFS API access.  Otherwise you can setup your own IPFS API server. Follow the directions `here <https://docs.historia.network/en/latest/votingnodes/setup-ipfs-api-win.rst`_.
+ 
 
 Click the "Test Connection to IPFS API Server" button. If the connection is successful you will see a Sucess message, as seen below.
 
