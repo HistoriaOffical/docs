@@ -263,6 +263,34 @@ Historia requires a DNS name set to enabled SSL for your IPFS node that will be 
 
 Remember that if you live in a oppressive country, your name will be associated with your DNS record in the global WHOIS database. Some DNS providers such as ionos.com will give a DNS name privacy for free with domain registration. But they would still be required to hand over your domain name information via court order. Another option is using one of the new blockchain DNS systems such as unstoppabledomains.com, and using crypto currency to purchase your domain name. However we have not tested using a blockchain DNS system yet.
 
+===================================================================
+Option 1: Automated / Guided Historia Software Setup
+===================================================================
+After the VPS has been setup, we recommend for most users that they 
+use the automated process. This is a bash script, that downloads and 
+configures most information for the node and gives the user commands 
+to run on the Historia Desktop Core Wallet. This is the quickest way
+to get a masternode up and running. If you prefer to use a manual setup
+scroll down in this document to "Option 2: Manual Historia Software 
+Setup".
+
+Download the Historia Masternode setup script
+=====================================================
+Login to your VPS and clone the git repository, and run the setup script::
+
+git clone https://github.com/HistoriaOffical/Historia-Masternode-Setup-Script.git
+cd Historia-Masternode-Setup-Script/
+chmod 755 masternode-setup.sh
+./masternode-setup.sh
+
+After that follow the directions in the script. It will install all the 
+required software and prompt the user when to run commands.
+
+===================================================================
+Option 2: Manual Historia Software Setup
+===================================================================
+
+
 Send the collateral from Historia Core Desktop Wallet
 =====================================================
 
