@@ -278,7 +278,6 @@ Download the Historia Masternode setup script
 =====================================================
 Login to your VPS and clone the git repository, and run the setup script::
 
-  getnewaddress
   git clone https://github.com/HistoriaOffical/Historia-Masternode-Setup-Script.git
   cd Historia-Masternode-Setup-Script/
   chmod 755 masternode-setup.sh
