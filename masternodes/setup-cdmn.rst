@@ -278,10 +278,10 @@ Download the Historia Masternode setup script
 =====================================================
 Login to your VPS and clone the git repository, and run the setup script::
 
-git clone https://github.com/HistoriaOffical/Historia-Masternode-Setup-Script.git
-cd Historia-Masternode-Setup-Script/
-chmod 755 masternode-setup.sh
-./masternode-setup.sh
+  git clone https://github.com/HistoriaOffical/Historia-Masternode-Setup-Script.git
+  cd Historia-Masternode-Setup-Script/
+  chmod 755 masternode-setup.sh
+  ./masternode-setup.sh
 
 After that follow the directions in the script. It will install all the 
 required software and prompt the user when to run commands.
