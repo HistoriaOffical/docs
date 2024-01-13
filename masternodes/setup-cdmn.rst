@@ -967,7 +967,7 @@ this script will not work for this masternode, and at the time of writing there 
 no way to update your masternode registation. You will have to move your masternode
 coins, and start and register a new masternode.
 
-Download the Historia Masternode Upgrade script
+Option 1: Download the Historia Masternode Upgrade script
 ---------------------------------------------------
 Login to your VPS and clone the git repository, and run the setup script::
 
@@ -980,8 +980,22 @@ Follow the directions in the script. It will install all the
 required software and prompt the user when to run commands. Once you have
 completed the script successfully your masternode is setup. Congrats!
 
+Option 2: Manual Update
+------------------------
+
+Manually Update the Sentinel
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sentinel is a very important part of the masternode system. It is very important to update Sentinel for the latest changes. Login to your VPS and run the following commands::
+
+  cd ~/.historiacore/sentinel
+  git pull
+  cd sentinel
+  virtualenv venv
+  venv/bin/pip install -r requirements.txt
+  venv/bin/python bin/sentinel.py
+
 Manually Update the Masternode
----------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Login to your VPS and run the following commands::
 
    wget https://github.com/HistoriaOffical/historia/releases/download/0.17.1.0/historiacore-0.17.1-x86_64-linux-gnu.tar.gz
@@ -995,7 +1009,6 @@ Login to your VPS and run the following commands::
    rm governance.dat
    cd ~/.historiacore/sentinel
    git pull
-
 
 
 Edit the historia.conf file by running this line::
