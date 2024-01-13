@@ -957,3 +957,82 @@ identifies your masternode.
 
 For support please come ask questions on the support channel in the Historia 
 Discord.
+
+Upgrade Masternode from v0.17.0.X to v0.17.1.0
+===================================================================
+We recommend for most users that they use the automated process. We have 
+a bash script, that downloads and updates the node automatically. It should
+be noted that if you registered your previous masternode with a invalid DNS name,
+this script will not work for this masternode, and at the time of writing there is
+no way to update your masternode registation. You will have to move your masternode
+coins, and start a register a new masternode.
+
+Download the Historia Masternode Upgrade script
+=====================================================
+Login to your VPS and clone the git repository, and run the setup script::
+
+  git clone https://github.com/HistoriaOffical/Historia-Masternode-Setup-Script.git
+  cd Historia-Masternode-Setup-Script/
+  chmod 755 masternode-upgrade.sh
+  ./masternode-upgrade.sh
+
+Follow the directions in the script. It will install all the 
+required software and prompt the user when to run commands. Once you have
+completed the script successfully your masternode is setup. Congrats!
+
+Manually Update the Masternode
+===============================
+Login to your VPS and run the following commands::
+
+   wget https://github.com/HistoriaOffical/historia/releases/download/0.17.1.0/historiacore-0.17.1-x86_64-linux-gnu.tar.gz
+   tar xvf historiacore-0.17.1-x86_64-linux-gnu.tar.gz
+   cd historiacore-0.17.1/bin/
+   ~/.historiacore/historia-cli stop
+   sleep 15
+   cp historiad historia-cli ~/.historiacore
+   cd .historiacore/
+   rm debug.log
+   rm governance.dat
+   cd ~/.historiacore/sentinel
+   git pull
+
+
+
+Edit the historia.conf file by running this line::
+
+   nano historia.conf
+
+Add the new masternodedns directive the historia.conf file and save/exit::
+
+   masternodedns=<VPS DNS RECORD>
+
+Restart the masternode::
+
+   ~/.historiacore/historiad 
+
+Check that the masternode is running and that you are on the latest version::
+
+   ./historia-cli getinfo
+   {
+     "version": 170100, // THIS IS THE LATEST VERSION
+     "protocolversion": 70215,
+     "walletversion": 120200,
+     "balance": 0
+     "privatesend_balance": 0.00000000,
+     "blocks": 1033485,
+     "timeoffset": 0,
+     "connections": 12,
+     "proxy": "",
+     "difficulty": 185.9313768951148,
+     "testnet": false,
+     "keypoololdest": 1583294033,
+     "keypoolsize": 1999,
+     "unlocked_until": -3607031457802878885,
+     "paytxfee": 0.00000000,
+     "relayfee": 0.00001000,
+     "errors": ""
+   }
+
+
+
+
