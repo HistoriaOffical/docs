@@ -987,37 +987,34 @@ Manually Update the Sentinel
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Sentinel is a very important part of the masternode system. It is very important to update Sentinel for the latest changes. Login to your VPS and run the following commands::
 
-  cd ~/.historiacore/sentinel
-  git pull
-  cd sentinel
-  virtualenv venv
-  venv/bin/pip install -r requirements.txt
-  venv/bin/python bin/sentinel.py
+   cd ~/.historiacore/sentinel
+   git pull
+   cd sentinel
+   virtualenv venv
+   venv/bin/pip install -r requirements.txt
+   venv/bin/python bin/sentinel.py
 
 Manually Update the Masternode
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Login to your VPS and run the following commands::
+Login to your VPS and edit the historia.conf file by running this line::
+
+   nano ~/.historiacore/historia.conf
+
+Add the new masternodedns directive the historia.conf file and save/exit::
+
+   masternodedns=<VPS DNS RECORD>
+
+Update the Historia Core daemon by runing the following commands (you can copy and paste these command all at once)::
 
    wget https://github.com/HistoriaOffical/historia/releases/download/0.17.1.0/historiacore-0.17.1-x86_64-linux-gnu.tar.gz
    tar xvf historiacore-0.17.1-x86_64-linux-gnu.tar.gz
    cd historiacore-0.17.1/bin/
    ~/.historiacore/historia-cli stop
    sleep 15
+   rm ~/.historiacore/historiad
+   rm ~/.historiacore/debug.log
+   rm ~/.historiacore/governance.dat
    cp historiad historia-cli ~/.historiacore
-   cd .historiacore/
-   rm debug.log
-   rm governance.dat
-   cd ~/.historiacore/sentinel
-   git pull
-
-
-Edit the historia.conf file by running this line::
-
-   nano historia.conf
-
-Add the new masternodedns directive the historia.conf file and save/exit::
-
-   masternodedns=<VPS DNS RECORD>
 
 Restart the masternode::
 
