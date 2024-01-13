@@ -965,7 +965,7 @@ a bash script, that downloads and updates the node automatically. It should
 be noted that if you registered your previous masternode with a invalid DNS name,
 this script will not work for this masternode, and at the time of writing there is
 no way to update your masternode registation. You will have to move your masternode
-coins, and start a register a new masternode.
+coins, and start and register a new masternode.
 
 Download the Historia Masternode Upgrade script
 =====================================================
