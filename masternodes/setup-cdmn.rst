@@ -263,7 +263,7 @@ Historia requires a DNS name set to enabled SSL for your IPFS node that will be 
 
 Remember that if you live in a oppressive country, your name will be associated with your DNS record in the global WHOIS database. Some DNS providers such as ionos.com will give a DNS name privacy for free with domain registration. But they would still be required to hand over your domain name information via court order. Another option is using one of the new blockchain DNS systems such as unstoppabledomains.com, and using crypto currency to purchase your domain name. However we have not tested using a blockchain DNS system yet.
 
-===================================================================
+=
 Option 1: Automated / Guided Historia Software Setup
 ===================================================================
 After the VPS has been setup, we recommend for most users that they 
@@ -287,7 +287,7 @@ Follow the directions in the script. It will install all the
 required software and prompt the user when to run commands. Once you have
 completed the script successfully your masternode is setup. Congrats!
 
-===================================================================
+
 Option 2: Manual Historia Software Setup
 ===================================================================
 
