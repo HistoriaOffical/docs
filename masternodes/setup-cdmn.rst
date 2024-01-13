@@ -968,7 +968,7 @@ no way to update your masternode registation. You will have to move your mastern
 coins, and start and register a new masternode.
 
 Download the Historia Masternode Upgrade script
-=====================================================
+---------------------------------------------------
 Login to your VPS and clone the git repository, and run the setup script::
 
   git clone https://github.com/HistoriaOffical/Historia-Masternode-Setup-Script.git
@@ -981,7 +981,7 @@ required software and prompt the user when to run commands. Once you have
 completed the script successfully your masternode is setup. Congrats!
 
 Manually Update the Masternode
-===============================
+---------------------------------------------------
 Login to your VPS and run the following commands::
 
    wget https://github.com/HistoriaOffical/historia/releases/download/0.17.1.0/historiacore-0.17.1-x86_64-linux-gnu.tar.gz
