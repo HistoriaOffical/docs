@@ -266,6 +266,7 @@ Remember that if you live in a oppressive country, your name will be associated 
 =
 Option 1: Automated / Guided Historia Software Setup
 ===================================================================
+
 After the VPS has been setup, we recommend for most users that they 
 use the automated process. This is a bash script, that downloads and 
 configures most information for the node and gives the user commands 
@@ -1001,8 +1002,22 @@ Login to your VPS and edit the historia.conf file by running this line::
    nano ~/.historiacore/historia.conf
 
 Add the new masternodedns directive the historia.conf file and save/exit::
-
-   masternodedns=<VPS DNS RECORD>
+   
+   #----
+   rpcuser=XXXXXXXXXXXXX
+   rpcpassword=XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+   rpcallowip=127.0.0.1
+   #----
+   listen=1
+   server=1
+   daemon=1
+   #----
+   #masternode=1
+   #masternodeblsprivkey=
+   #masternodecollateral=5000
+   externalip=XXX.XXX.XXX.XXX:10101
+   #----
+   masternodedns=<VPS DNS RECORD> // THIS IS THE NEW DIRECTIVE THAT MUST BE ADDED
 
 Update the Historia Core daemon by runing the following commands (you can copy and paste these command all at once)::
 
@@ -1042,6 +1057,13 @@ Check that the masternode is running and that you are on the latest version::
      "relayfee": 0.00001000,
      "errors": ""
    }
+
+Finally just as a sanity check, confirm that the masternode has these ports open::
+
+   - TCP 80
+   - TCP 443
+   - TCP 4001
+   - TCP 10101
 
 
 
