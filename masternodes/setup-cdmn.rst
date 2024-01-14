@@ -1014,9 +1014,9 @@ directive the historia.conf file and saving/exit::
    daemon=1
    #----
    masternode=1
-   masternodeblsprivkey=
-   #masternodecollateral=5000
-   xternalip=XXX.XXX.XXX.XXX:10101
+   masternodeblsprivkey=<YOURBLSPRIVKEY>
+   masternodecollateral=5000
+   externalip=XXX.XXX.XXX.XXX:10101
    #----
    masternodedns=<VPS DNS RECORD> // THIS IS THE NEW DIRECTIVE THAT MUST BE ADDED
 
