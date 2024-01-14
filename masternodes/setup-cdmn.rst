@@ -1001,7 +1001,8 @@ Login to your VPS and edit the historia.conf file by running this line::
 
    nano ~/.historiacore/historia.conf
 
-Add the new masternodedns directive the historia.conf file and save/exit::
+The historia.conf file should look like this after adding the new masternodedns 
+directive the historia.conf file and saving/exit::
    
    #----
    rpcuser=XXXXXXXXXXXXX
@@ -1012,10 +1013,10 @@ Add the new masternodedns directive the historia.conf file and save/exit::
    server=1
    daemon=1
    #----
-   #masternode=1
-   #masternodeblsprivkey=
+   masternode=1
+   masternodeblsprivkey=
    #masternodecollateral=5000
-   externalip=XXX.XXX.XXX.XXX:10101
+   xternalip=XXX.XXX.XXX.XXX:10101
    #----
    masternodedns=<VPS DNS RECORD> // THIS IS THE NEW DIRECTIVE THAT MUST BE ADDED
 
@@ -1058,7 +1059,7 @@ Check that the masternode is running and that you are on the latest version::
      "errors": ""
    }
 
-Finally just as a sanity check, confirm that the masternode has these ports open::
+Finally just as a sanity check, confirm that the masternode has these ports open:
 
    - TCP 80
    - TCP 443
