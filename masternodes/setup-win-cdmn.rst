@@ -5,7 +5,7 @@
 .. _masternode-setup:
 
 =====================================================================
-Setup For Windows (THIS IS SOMEWHAT OUTDATED, WE ARE WORKING ON AN UPDATE)
+Setup For Windows
 =====================================================================
 
 Setting up a masternode requires a basic understanding of Windows and blockchain technology, as well as an ability to follow instructions closely. It also requires regular maintenance and careful security. There are some decisions to be made along the way, and optional extra steps to take for increased security.
@@ -28,7 +28,7 @@ Masternode Info
 ---------------
 
 - Collateral Requirement: 5000 HTA
-- Reward: 32% per block - increaes 2.5% every 2 months until 50% per block
+- Reward: 50% per block
 - Ports: TCP 10101, TCP 4001, TCP 443, TCP 80 (Home network would require port forwarding)
 - IIS or any SSL supported Webserver
 - IPFS Required: Yes
@@ -103,7 +103,7 @@ Option 2: Child Name – Domain Panel
 
 Install Historia Windows Wallet
 ===============================
-You MUST use Historia 0.17.0.2 or later, otherwise this process will fail. https://github.com/HistoriaOffical/historia/releases/
+You MUST use Historia 0.17.1.0 or later, otherwise this process will fail. https://github.com/HistoriaOffical/historia/releases/
 
 Download the correct Windows Historia setup file from the previous URL. Once downloaded, run the Historia installer and install the Historia wallet. Open the wallet and let the blockchain sync completely.
 
@@ -176,6 +176,7 @@ A text editor window will appear. We now need to create a configuration file spe
   #masternode=1
   #masternodeblsprivkey=
   #masternodecollateral=5000
+  #masternodedns=<yourdnsname>
   externalip=XXX.XXX.XXX.XXX:10101
   #----
 
@@ -186,12 +187,12 @@ Replace the fields marked with ``XXXXXXX`` as follows:
 - ``rpcpassword``: enter any string of numbers or letters, no special
   characters allowed
 - ``masternodecollateral``: 100 or 5000 depending on if you are setting up a Voting Masternode or Content Distribution Masternode. For this guide set this to 5000.
+- ``masternodedns``: The DNS name you previously registered.
 - ``externalip``: this is the IPv4 address of your VPS
 
 Save the historia.conf file in the default location and exit the text editor.::
 
    C:\Users\<yourusername>\AppData\Roaming\HistoriaCore\ 
-
 
 Setup IPFS
 ================
@@ -238,6 +239,16 @@ Add Historia IPFS bootstrap nodes, configure our IPFS node, and only connect to 
    ipfs bootstrap add /ip4/45.32.194.49/tcp/4001/ipfs/QmZXbb5gRMrpBVe79d8hxPjMFJYDDo9kxFZvdb7b2UYamj
    ipfs bootstrap add /ip4/45.76.236.45/tcp/4001/ipfs/QmeW8VxxZjhZnjvZmyBqk7TkRxrRgm6aJ1r7JQ51ownAwy
    ipfs bootstrap add /ip4/209.250.233.69/tcp/4001/ipfs/Qma946d7VCm8v2ny5S2wE7sMFKg9ZqBXkkZbZVVxjJViyu
+   ipfs config --json Datastore.StorageMax "\"50GB\""
+   ipfs config --json Gateway.HTTPHeaders.Access-Control-Allow-Headers "[\"X-Requested-With\", \"Access-Control-Expose-Headers\", \"Range\", \"Authorization\"]"
+   ipfs config --json Gateway.HTTPHeaders.Access-Control-Allow-Methods "[\"POST\", \"GET\"]"
+   ipfs config --json Gateway.HTTPHeaders.Access-Control-Allow-Origin "[\"*\"]"
+   ipfs config --json Gateway.HTTPHeaders.Access-Control-Expose-Headers "[\"Location\", \"Ipfs-Hash\"]"
+   ipfs config --json Gateway.HTTPHeaders.X-Special-Header "[\"Access-Control-Expose-Headers: Ipfs-Hash\"]"
+   ipfs config --json Gateway.NoFetch "false"
+   ipfs config --json Swarm.ConnMgr.HighWater "500"
+   ipfs config --json Swarm.ConnMgr.LowWater "200"
+
 
 If the commands did not work you have to do these manually by edit config file at C:\\Users\\<YOURUSERNAME>\\\.ipfs\\config  and add or edit parameters. 
 Change your ipfs configuration file to look something like this. It should be noted that this is not the entire IPFS file, but the areas that need to be changed: ::
@@ -329,6 +340,9 @@ Output ::
    /ip4/45.76.236.45/tcp/4001/ipfs/QmeW8VxxZjhZnjvZmyBqk7TkRxrRgm6aJ1r7JQ51ownAwy
    
 You MUST see at least these peers to verify you are connected to the Historia IPFS swarm. If you do not see these peers, you will not receive any extra rewards, so please go back, re-read the IPFS documentation and get connected to the proper swarm.
+
+Setup IPFS to start on boot and restart on crash
+------------------------------------------------
 
 
 Setup IIS in Windows, SSL Certificate, and point to IPFS
@@ -632,6 +646,62 @@ Click Ok
 
 .. figure:: ../img/4.PNG
 
+Setup Task for IPFS
+-----------------------
+
+Open Task Scheduler:
+Press Win + R to open the Run dialog.
+Type taskschd.msc and press Enter.
+
+Create Task -> General Tab - Name: IPFS
+
+.. figure:: ../img/1.PNG
+
+
+Settings:
+
+   - Trigger Tab -> New (Trigger)  
+   - Settings -> Begin the task -> At Start Up
+
+.. figure:: ../img/2.PNG
+
+
+Settings:
+
+   - Actions Tab -> New (Action)  
+   - Program/script -> Browse to::
+   
+      C:\Users\<yourusername>\AppData\Roaming\HistoriaCore\kubo\ipfs.exe  
+   
+    - Add Arguments::
+
+      daemon
+
+
+Click Ok  
+
+.. figure:: ../img/3.PNG
+
+
+Settings:
+
+   - Conditions Tab -> Power  
+   - Uncheck box for "Start task only if the computer is on AC Power"  
+
+Click Ok  
+
+.. figure:: ../img/4.PNG
+
+Settings:
+
+   - Settings Tab 
+   - Check box for "If task fails, restart every"
+   - Attempt to restart 10 times
+   - Uncheck box for "Stop the task if it runs longer..."
+
+Click Ok  
+
+.. figure:: ../img/4.PNG
 
 
 Congratulations! Your masternode is now running.
