@@ -198,38 +198,23 @@ Setup IPFS
 ================
 Option 1: Use prebuild package
 -----------------
-Download and follow instruction from this page: ::
+Download version v0.4.23. It should be noted that currently the newest version that works is v0.4.23::
 
    https://dist.ipfs.io/#go-ipfs
 
+After downloading, unzip and copy the kubo directory into your HistoriaCore directory (C:\Users\<yourusername>\AppData\Roaming\HistoriaCore\)   as seen below.
 
-
-Option 2: Compile from source
------------------
-If want to build from source on Windows take a look at this document for instructions.::
-
-   https://github.com/ipfs/go-ipfs/blob/master/docs/windows.md
-   
-   / Note : To run the IPFS Daemon you must install the Go Lang
-
-
-Option 3: Manual from compiled or downloaded files
------------------
-Download or compile IPFS files and put them to a folder , then Ensure the Go and IPFS binaries (found in C:\\Go\\bin or where you installed) are in your Path system environment variables. To check click System, Advanced system settings, Environment Variables... and open Path under System variables:
-
-.. figure:: /masternodes/img/ipfs-folder.png
-
-.. figure:: /masternodes/img/system-variables.png
-
+.. figure:: ../img/1.PNG
 
 Initialize IPFS Daemon for Historia
 -----------------
 Since we will be using IPFS only for Historia, we can safely run the initialization: 
 (Run commands on Windows Powershell or Command Prompt as Admin) ::
 
+   cd C:\\Users\\<yourusername>\\AppData\\Roaming\\HistoriaCore\\Kubo\\
    ipfs init
 
-Remove Original Bootstap IPFS Nodes and Connect to Historia IPFS Swarm
+Add Bootstap IPFS Nodes and Connect to Historia IPFS Swarm
 -----------------
 Add Historia IPFS bootstrap nodes, configure our IPFS node, and only connect to the Historia IPFS Swarm.  ::
 
@@ -341,6 +326,7 @@ Output ::
    
 You MUST see at least these peers to verify you are connected to the Historia IPFS swarm. If you do not see these peers, you will not receive any extra rewards, so please go back, re-read the IPFS documentation and get connected to the proper swarm.
 
+After you have tested the IPFS daemon, you can kill the daemon and close the command line window. We will setup IPFS to run on start up at the end of this document.
 
 Setup IIS in Windows, SSL Certificate, and point to IPFS
 ========================================================
