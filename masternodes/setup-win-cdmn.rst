@@ -638,7 +638,7 @@ Type taskschd.msc and press Enter.
 
 Create Task -> General Tab - Name: IPFS
 
-.. figure:: ../img/ipfs-task1.PNG
+.. figure:: ../img/ipfs-task1.png
 
 
 Settings:
@@ -646,7 +646,7 @@ Settings:
    - Trigger Tab -> New (Trigger)  
    - Settings -> Begin the task -> At Start Up
 
-.. figure:: ../img/ipfs-task2.PNG
+.. figure:: ../img/ipfs-task2.png
 
 
 Settings:
@@ -663,7 +663,7 @@ Settings:
 
 Click Ok  
 
-.. figure:: ../img/ipfs-task3.PNG
+.. figure:: ../img/ipfs-task3.png
 
 Settings:
 
@@ -674,7 +674,7 @@ Settings:
 
 Click Ok  
 
-.. figure:: ../img/ipfs-task4.PNG
+.. figure:: ../img/ipfs-task4.png
 
 
 Congratulations! Your masternode is now running.
