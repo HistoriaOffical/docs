@@ -656,10 +656,9 @@ Settings:
    
       C:\Users\<yourusername>\AppData\Roaming\HistoriaCore\kubo\ipfs.exe  
    
-    - Add Arguments::
-
+   - Add Arguments::
+       
       daemon
-
 
 Click Ok  
 
