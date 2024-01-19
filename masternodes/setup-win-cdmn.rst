@@ -582,7 +582,7 @@ Create new file in the sentinel directory named sentinel.conf::
 Edit file and paste the following into the sentinel.conf file::
  
    network=mainnet  
-   db_name=entinel.db  
+   db_name=sentinel.db  
    db_driver=sqlite
 
 
@@ -676,7 +676,7 @@ Click Ok
 .. figure:: ../img/ipfs-task4.png
 
 
-Congratulations! Your masternode is now running.
+Congratulations! Your masternode is now running. If you restart your computer, you must launch the Historia Wallet again, otherwise your masternode will not receive payments.
 For support please come ask questions on the support channel in the Historia Discord.
 
 
