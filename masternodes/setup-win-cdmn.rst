@@ -341,9 +341,6 @@ Output ::
    
 You MUST see at least these peers to verify you are connected to the Historia IPFS swarm. If you do not see these peers, you will not receive any extra rewards, so please go back, re-read the IPFS documentation and get connected to the proper swarm.
 
-Setup IPFS to start on boot and restart on crash
-------------------------------------------------
-
 
 Setup IIS in Windows, SSL Certificate, and point to IPFS
 ========================================================
