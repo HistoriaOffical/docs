@@ -582,7 +582,7 @@ Create new file in the sentinel directory named sentinel.conf::
 Edit file and paste the following into the sentinel.conf file::
  
    network=mainnet  
-   db_name=database/sentinel.db  
+   db_name=entinel.db  
    db_driver=sqlite
 
 
@@ -603,7 +603,7 @@ Settings:
    - Recur Every: 1 day  
    - Advanced Settings:  
    - Repeat Task Every: 1 Minute (Notice you have to select 5 minutes from the drop down, then edit the 5 to 1)  
-For a duration of:Indefinitely  
+   - For a duration of:Indefinitely  
 
 .. figure:: ../img/2.PNG
 
@@ -638,7 +638,7 @@ Type taskschd.msc and press Enter.
 
 Create Task -> General Tab - Name: IPFS
 
-.. figure:: ../img/1.PNG
+.. figure:: ../masternodes/ipfs-task1.PNG
 
 
 Settings:
@@ -646,7 +646,7 @@ Settings:
    - Trigger Tab -> New (Trigger)  
    - Settings -> Begin the task -> At Start Up
 
-.. figure:: ../img/2.PNG
+.. figure:: ../masternodes/ipfs-task2.PNG
 
 
 Settings:
@@ -663,17 +663,7 @@ Settings:
 
 Click Ok  
 
-.. figure:: ../img/3.PNG
-
-
-Settings:
-
-   - Conditions Tab -> Power  
-   - Uncheck box for "Start task only if the computer is on AC Power"  
-
-Click Ok  
-
-.. figure:: ../img/4.PNG
+.. figure:: ../masternodes/ipfs-task3.PNG
 
 Settings:
 
@@ -684,7 +674,7 @@ Settings:
 
 Click Ok  
 
-.. figure:: ../img/4.PNG
+.. figure:: ../masternodes/ipfs-task4.PNG
 
 
 Congratulations! Your masternode is now running.
