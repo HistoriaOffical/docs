@@ -204,7 +204,7 @@ Download version v0.4.23. It should be noted that currently the newest version t
 
 After downloading, unzip and copy the kubo directory into your HistoriaCore directory (C:\\Users\\<yourusername>\\AppData\\Roaming\\HistoriaCore\\)   as seen below.
 
-.. figure:: ../img/1.PNG
+.. figure:: ../img/kubo.png
 
 Initialize IPFS Daemon for Historia
 -----------------
