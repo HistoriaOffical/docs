@@ -209,9 +209,9 @@ After downloading, unzip and copy the kubo directory into your HistoriaCore dire
 Initialize IPFS Daemon for Historia
 -----------------
 Since we will be using IPFS only for Historia, we can safely run the initialization: 
-(Run commands on Windows Powershell or Command Prompt as Admin) ::
+(Run commands on Windows Command Prompt as Admin) ::
 
-   cd C:\\Users\\<yourusername>\\AppData\\Roaming\\HistoriaCore\\Kubo\\
+   cd C:\\Users\<yourusername>\AppData\Roaming\HistoriaCore\Kubo\
    ipfs init
 
 Add Bootstap IPFS Nodes and Connect to Historia IPFS Swarm
