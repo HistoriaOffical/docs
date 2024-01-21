@@ -334,7 +334,7 @@ Because this is a content distribution masternode, you must setup IIS web server
 
 Install IIS
 -----------
-First step in this process is to install IIS. Instead of walking through that process here, we will point you to this 10 step installation procedure: https://community.lansweeper.com/t5/installation/install-iis-internet-information-services/ta-p/64422#:~:text=Enable%20Internet%20Information%20Services%20(IIS,Services%20checkbox%20and%20select%20OK.
+First step in this process is to install IIS. Instead of walking through that process here, we will point you to this installation procedure: https://community.lansweeper.com/t5/installation/install-iis-internet-information-services/ta-p/64422#:~:text=Enable%20Internet%20Information%20Services%20(IIS,Services%20checkbox%20and%20select%20OK.
 
 Create Binding in IIS
 ---------------------
