@@ -290,7 +290,7 @@ Now when you start IPFS, the IPFS daemon will now connect to the Historia IPFS s
 
   ipfs daemon
 
-If you do not see an error message such as::
+If you see an error message such as::
 
    E:\HistoriaCore\kubo> .\ipfs.exe daemon
    Initializing daemon...
