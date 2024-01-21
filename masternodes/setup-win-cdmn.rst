@@ -366,6 +366,7 @@ To setup the SSL certicate we are going to be using a free utility called Win-Ac
 If all goes well you will have a new SSL certificate installed in IIS for your Default Site. If the Create certicate failed, check the following things:
 
 - Is Your firewall is blocking port 80 and port 443?
+- Did you use the correct DNS name when setting up IIS?
 
 Setup Reverse Proxy from IIS to IPFS
 ------------------------------------
