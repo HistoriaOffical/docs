@@ -198,9 +198,9 @@ Setup IPFS
 ================
 Option 1: Use prebuild package
 -----------------
-Download version v0.4.23. It should be noted that currently the newest version that works is v0.4.23::
+Download version v0.4.23. It should be noted that currently the newest version that works is v0.4.23. If you are running a version newer that v0.4.23 this process will fail::
 
-   https://dist.ipfs.io/#go-ipfs
+   https://dist.ipfs.tech/go-ipfs/v0.4.23
 
 After downloading, unzip and copy the kubo directory into your HistoriaCore directory (C:\\Users\\<yourusername>\\AppData\\Roaming\\HistoriaCore\\)   as seen below.
 
@@ -211,7 +211,7 @@ Initialize IPFS Daemon for Historia
 Since we will be using IPFS only for Historia, we can safely run the initialization: 
 (Run commands on Windows Command Prompt as Admin) ::
 
-   cd C:\\Users\<yourusername>\AppData\Roaming\HistoriaCore\Kubo\
+   cd C:\Users\<yourusername>\AppData\Roaming\HistoriaCore\Kubo\
    ipfs init
 
 Add Bootstap IPFS Nodes and Connect to Historia IPFS Swarm
