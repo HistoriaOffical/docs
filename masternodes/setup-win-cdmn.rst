@@ -290,6 +290,25 @@ Now when you start IPFS, the IPFS daemon will now connect to the Historia IPFS s
 
   ipfs daemon
 
+If you do not see an error message such as::
+
+   E:\HistoriaCore\kubo> .\ipfs.exe daemon
+   Initializing daemon...
+   go-ipfs version: 0.4.23-
+   Repo version: 7
+   System version: amd64/windows
+   Golang version: go1.13.7
+
+   Error: Your programs version (7) is lower than your repos (15).
+   Please update ipfs to a version that supports the existing repo, or run
+   a migration in reverse.
+
+Do the following:
+
+- Kill (Ctrl-C) the IPFS daemon
+- Delete the .ipfs directory (C:\\Users\\<YOURUSERNAME>\\\.ipfs\)
+- Run "ipfs.exe" init again
+- Run "ipfs.exe daemon" again and see if that clears up the error
 
 Get IPFS Peer ID
 -----------------
@@ -306,7 +325,7 @@ Result : ::
       "/ip4/127.0.0.1/tcp/4001/ipfs/QmVjkn7yEqb3LTLCpnndHgzczPAPAxxpJ25mNwuuaBtFJD",
       "/ip4/<youripv4address>/tcp/4001/ipfs/QmVjkn7yEqb3LTLCpnndHgzczPAPAxxpJ25mNwuuaBtFJD",
    ],
-   "AgentVersion": "go-ipfs/0.4.21/8ca278f45",
+   "AgentVersion": "go-ipfs/0.4.23/8ca278f45",
    "ProtocolVersion": "ipfs/0.1.0"
    }
 
@@ -392,7 +411,16 @@ Congratulations! You now have finished setup for IPFS. You can now test out the 
 
    https://<yourdomainname>/ipfs/QmS4ustL54uo8FzR9455qaxZwuMiUhyvMcX9Ba8nUH4uVv/readme
 
-If you see the IPFS help message, you have successful setup your IPFS server with IIS in a reverse proxy configuration with a valid SSL certifcate. If you do not see the IPFS help message, you must go back over all steps and get this properly working before you can continue to setup your Historia masternode.
+If you see the IPFS help message, you have successful setup your IPFS server with IIS in a reverse proxy configuration with a valid SSL certifcate. 
+
+If you do not see the IPFS help message, you must go back over all steps and get this properly working before you can continue to setup your Historia masternode.
+
+Check the following things:
+
+- Is Your firewall is blocking port 4001?
+- Are you running the correct version of IPFS v0.4.23?
+- Did you restart IIS after all changes have been made?
+
 
 If everything is good, you can now proceed to installing your Historia masternode. Continue with the next step to construct the ProTx transaction required to enable your masternode.
 
