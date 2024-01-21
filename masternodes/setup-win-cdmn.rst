@@ -373,7 +373,7 @@ Depending on your setup, you may need to install additional Microsoft IIS module
 
 - Confirm it's installed or install the Windows URL rewrite module. It can be downloaded from https://www.iis.net/downloads/microsoft/url-rewrite
 - Confirm it's installed or install Application Request Routing (ARR). It can be downloaded from https://www.iis.net/downloads/microsoft/application-request-routing
-
+- Restart IIS service or stop and start from left hand side panel
 - Open Run Command using the shortcut Win Key + R.
 - Type in 'inetmgr'.
 - Select and run the Internet Information Services (IIS) Manager.
