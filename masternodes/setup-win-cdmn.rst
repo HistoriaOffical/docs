@@ -324,7 +324,7 @@ Output ::
    /ip4/45.32.194.49/tcp/4001/ipfs/QmZXbb5gRMrpBVe79d8hxPjMFJYDDo9kxFZvdb7b2UYamj
    /ip4/45.76.236.45/tcp/4001/ipfs/QmeW8VxxZjhZnjvZmyBqk7TkRxrRgm6aJ1r7JQ51ownAwy
    
-You MUST see at least these peers to verify you are connected to the Historia IPFS swarm. If you do not see these peers, you will not receive any extra rewards, so please go back, re-read the IPFS documentation and get connected to the proper swarm.
+It would be good see at least these peers to verify you are connected to the Historia IPFS swarm. It's ok if you don't see these peers, Historia Core will eventually find them.
 
 After you have tested the IPFS daemon, you can kill the daemon and close the command line window. We will setup IPFS to run on start up at the end of this document.
 
