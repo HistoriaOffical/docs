@@ -307,7 +307,7 @@ Do the following:
 
 - Kill (Ctrl-C) the IPFS daemon
 - Delete the .ipfs directory (C:\\Users\\<YOURUSERNAME>\\\.ipfs\)
-- Run "ipfs.exe" init again
+- Run "ipfs.exe init" again
 - Run "ipfs.exe daemon" again and see if that clears up the error
 
 Get IPFS Peer ID
