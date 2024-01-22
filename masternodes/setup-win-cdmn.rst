@@ -461,11 +461,12 @@ The public key will be used in following steps. The private key must be entered 
 
    C:\Users\<yourusername>\AppData\Roaming\HistoriaCore\historia.conf
 
-The editor appears with the existing masternode configuration. Add or uncomment these lines in the file, replacing the key with your BLS private key generated above: ::
+The editor appears with the existing masternode configuration. Add or uncomment these lines in the file, replacing the key with your BLS private key generated above, and adding your DNS "A" record::
 
  masternode=1
  masternodecollateral=5000
  masternodeblsprivkey=395555d67d884364f9e37e7e1b29536519b74af2e5ff7b62122e62c2fffab35e
+masternodedns=<yourdnsname>
 
 Press enter to make sure there is a blank line at the end of the file, then save and close the editor. We now need to restart the Historia Core for this change to take effect. Close Historia Core and run it again. 
 
