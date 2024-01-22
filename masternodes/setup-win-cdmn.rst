@@ -235,7 +235,7 @@ Add Historia IPFS bootstrap nodes, configure our IPFS node, and only connect to 
    ipfs config --json Swarm.ConnMgr.LowWater "200"
 
 
-If the commands did not work you have to do these manually by edit config file at C:\\Users\\<YOURUSERNAME>\\\.ipfs\\config  and add or edit parameters. 
+If the commands did not work you have to do these manually by edit config file at C:\\Users\\<YOURUSERNAME>\\.ipfs\\config  and add or edit parameters. 
 Change your ipfs configuration file to look something like this. It should be noted that this is not the entire IPFS file, but the areas that need to be changed: ::
 
    ...snipped...
