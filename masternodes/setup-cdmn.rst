@@ -369,16 +369,16 @@ Create a working directory for Historia, extract the compressed archive and
 copy the necessary files to the directory::
 
   mkdir ~/.historiacore
-  tar xfvz historiacore-0.17.1.0-x86_64-linux-gnu.tar.gz
-  cp historiacore-0.17.0/bin/historiad ~/.historiacore/  
-  cp historiacore-0.17.0/bin/historia-cli ~/.historiacore/  
+  tar xfvz historiacore-0.17.1-x86_64-linux-gnu.tar.gz
+  cp historiacore-0.17.1/bin/historiad ~/.historiacore/  
+  cp historiacore-0.17.1/bin/historia-cli ~/.historiacore/  
   chmod 777 ~/.historiacore/historia*  
 
 
 Clean up unneeded files::
 
-  rm historiacore-0.17.1.0-x86_64-linux-gnu.tar.gz
-  rm -r historiacore-0.17.0/
+  rm historiacore-0.17.1-x86_64-linux-gnu.tar.gz
+  rm -r historiacore-0.17.1/
 
 Create a configuration file using the following command::
 
