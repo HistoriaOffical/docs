@@ -202,7 +202,7 @@ Download version v0.4.23. It should be noted that currently the newest version t
 
    https://dist.ipfs.tech/go-ipfs/v0.4.23
 
-After downloading, unzip and copy the kubo directory into your HistoriaCore directory (C:\\Users\\<yourusername>\\AppData\\Roaming\\HistoriaCore\\)   as seen below.
+After downloading, unzip and copy the directory into your HistoriaCore directory (C:\\Users\\<yourusername>\\AppData\\Roaming\\HistoriaCore\\)   as seen below.
 
 .. figure:: ../img/kubo.png
 
