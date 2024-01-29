@@ -379,7 +379,7 @@ To setup the SSL certicate we are going to be using a free utility called Win-Ac
 - Win-acme will start
 - Choose: N: Create new certificate (simple for IIS)
 - Choose: 1: Default Web Site (1 binding)
-- Choose: 3: Pick all bindings
+- Choose: A: Pick all bindings
 - Choose: Continue with this selection? (y*/n)  - yes
 
 If all goes well you will have a new SSL certificate installed in IIS for your Default Site. If the Create certicate failed, check the following things:
@@ -466,7 +466,7 @@ The editor appears with the existing masternode configuration. Add or uncomment 
  masternode=1
  masternodecollateral=5000
  masternodeblsprivkey=395555d67d884364f9e37e7e1b29536519b74af2e5ff7b62122e62c2fffab35e
-masternodedns=<yourdnsname>
+ masternodedns=<yourdnsname>
 
 Press enter to make sure there is a blank line at the end of the file, then save and close the editor. We now need to restart the Historia Core for this change to take effect. Close Historia Core and run it again. 
 
@@ -645,6 +645,10 @@ Settings:
    
       C:\Users\<yourusername>\AppData\Roaming\HistoriaCore\sentinel\sentinel.exe  
 
+   - Start In::
+
+      C:\Users\<yourusername>\AppData\Roaming\HistoriaCore\sentinel\ 
+
 Click Ok  
 
 .. figure:: ../img/3.PNG
@@ -684,7 +688,7 @@ Settings:
    - Actions Tab -> New (Action)  
    - Program/script -> Browse to::
    
-      C:\Users\<yourusername>\AppData\Roaming\HistoriaCore\kubo\ipfs.exe  
+      C:\Users\<yourusername>\AppData\Roaming\HistoriaCore\go-ipfs\ipfs.exe  
    
    - Add Arguments::
        
@@ -705,8 +709,53 @@ Click Ok
 
 .. figure:: ../img/ipfs-task4.png
 
+Setup Task for Historia
+-----------------------
 
-Congratulations! Your masternode is now running. If you restart your computer, you must launch the Historia Wallet again, otherwise your masternode will not receive payments.
+Open Task Scheduler:
+Press Win + R to open the Run dialog.
+Type taskschd.msc and press Enter.
+
+Create Task -> General Tab - Name: Historia
+
+.. figure:: ../img/ipfs-task1.png
+
+
+Settings:
+
+   - Trigger Tab -> New (Trigger)  
+   - Settings -> Begin the task -> At Start Up
+
+.. figure:: ../img/ipfs-task2.png
+
+
+Settings:
+
+   - Actions Tab -> New (Action)  
+   - Program/script -> Browse to::
+   
+      C:\Program Files\Historia Core\Historia-Qt.exe 
+  
+
+Click Ok  
+
+.. figure:: ../img/ipfs-task3.png
+
+Settings:
+
+   - Settings Tab 
+   - Check box for "If task fails, restart every"
+   - Attempt to restart 10 times
+   - Uncheck box for "Stop the task if it runs longer..."
+
+Click Ok  
+
+.. figure:: ../img/ipfs-task4.png
+
+If your server restarts, you MUST restart your Historia Desktop Wallet.
+
+Congratulations! Your masternode is now running. If you restart your computer, you must launch the Historia Wallet again, otherwise your masternode will not receive payments. 
+
 For support please come ask questions on the support channel in the Historia Discord.
 
 
