@@ -8,4 +8,7 @@
 Hosting Services
 ================
 
-Coming soon.
+The following are services that properly host Historia Network Masternodes:
+
+- https://pecuniaplatform.io/coin-stats/historia
+
