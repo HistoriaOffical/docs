@@ -8,7 +8,7 @@
 Hosting Services
 ================
 
-The following are services that properly host Historia Network Masternodes:
+For non-technical users, we recommend using a Hosted Masternode service. The following are services that properly host Historia Network Masternodes. 
 
 - https://pecuniaplatform.io/coin-stats/historia
 
