@@ -5,7 +5,7 @@
 .. _masternode-hosting:
 
 ================
-Hosting Services
+Masternode Hosting Services (Recommended)
 ================
 
 For non-technical users, we recommend using a Hosted Masternode service. The following are services that properly host Historia Network Masternodes. 
