@@ -219,7 +219,7 @@ After about 30 minutes or so, come back and check the Settings -> Setup Masterno
 
 After a few minutes, your masternode should be setup, and you will see two transactions in your wallet transactions to yourself, as seen below.
 
-.. figure:: ../img/amn14.png
+.. figure:: ../img/amn15.png
    :width: 600px
 
    Now Unlock your wallet to send masternode registration commands to the Historia Network.
@@ -227,7 +227,7 @@ After a few minutes, your masternode should be setup, and you will see two trans
 If you go to the Manage Masternodes & Voting Nodes, you will see that a new Masternode has been added to the screen. Your masternode has now been setup, and properly registered, and voting keys have been setup ready to vote.
 
 
-.. figure:: ../img/amn15.png
+.. figure:: ../img/amn16.png
    :width: 600px
 
    Now Unlock your wallet to send masternode registration commands to the Historia Network.
