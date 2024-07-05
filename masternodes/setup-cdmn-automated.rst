@@ -127,7 +127,7 @@ Verify that the Historia Network Core wallet is fully synced. Once synchronizati
    Click the Open Historia Local Web (HLWA)
 
 
-Prelimiary Setup
+preliminary Setup
 ----------------
 If the Historia Local Web application has not been started previously, you will need to complete the preliminary setup as shown in the following screenshots.
 
@@ -137,12 +137,12 @@ If the Historia Local Web application has not been started previously, you will 
    Choose if you are using high-speed internet or not.
 
 .. figure:: ../img/amn3.png
-   :width: 600px
+   :width: 300px
 
    If you choose the High Speed Internet, hit the ok button
 
 .. figure:: ../img/amn4.png
-   :width: 600px
+   :width: 300px
 
    Hit OK and Choose Content Distribution Masternode
 
@@ -152,16 +152,16 @@ If the Historia Local Web application has not been started previously, you will 
    Click on the table to choose a masternode and then hit the "Test & Save IPFS Server"
 
 .. figure:: ../img/amn6.png
-   :width: 600px
+   :width: 300px
 
    This masternode is up and available. Hit the Save button.
 
 .. figure:: ../img/amn7.png
-   :width: 600px
+   :width: 300px
 
-   Prelimiary Setup is complete, now you can hit the Ok button.
+   Preliminary Setup is complete, now you can hit the Ok button.
 
-After the prelimiary setup is complete, you can now proceed to the Automated Ubuntu 20.04 VPS Setup below.
+After the preliminary setup is complete, you can now proceed to the Automated Ubuntu 20.04 VPS Setup below.
 
 Automated Ubuntu 20.04 VPS Setup
 ---------------------------------
@@ -189,14 +189,14 @@ After you enter in all of the required information, click the "Test Connection" 
 If it's successfully, you will get a Success message as seen below.
 
 .. figure:: ../img/amn11.png
-   :width: 600px
+   :width: 300px
 
    Successfully created New User for Historia
 
 Then you will see a notification that your Mastenode Has Been Queued for Setup, as seen in the screenshot below.
 
 .. figure:: ../img/amn12.png
-   :width: 600px
+   :width: 300px
 
    Your masternode has been queued for setup.
 
