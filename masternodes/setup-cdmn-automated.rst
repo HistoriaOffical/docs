@@ -53,7 +53,7 @@ In this guide, we will setup a Content Distribution Masternode (CDMN) with colla
 Set up your VPS
 ===============
 
-A VPS, more commonly known as a cloud server, is fully functional installation of an operating system (usually Linux) operating within a virtual machine. The virtual machine allows the VPS provider to run multiple systems on one physical server, making it more efficient and much cheaper than having a single operating system running on the “bare metal” of each server. A VPS is ideal for hosting a Historia masternode because they typically offer guaranteed uptime, redundancy in the case of hardware failure and a static IP address that is required to ensure you remain in the masternode payment queue. While running a masternode from home on a desktop computer is technically possible, it will most likely not work reliably because most ISPs allocate dynamic IP addresses to home users.
+A VPS, more commonly known as a cloud server, is s fully functional installation of an operating system (usually Linux) operating within a virtual machine. The virtual machine allows the VPS provider to run multiple systems on one physical server, making it more efficient and much cheaper than having a single operating system running on the “bare metal” of each server. A VPS is ideal for hosting a Historia masternode because they typically offer guaranteed uptime, redundancy in the case of hardware failure and a static IP address that is required to ensure you remain in the masternode payment queue. While running a masternode from home on a desktop computer is technically possible, it will most likely not work reliably because most ISPs allocate dynamic IP addresses to home users.
 
 We will use Vultr hosting as an example of a VPS. First create an account and add credit. Then go to the Servers menu item on the left and click + to add a new server. 
 
@@ -107,7 +107,7 @@ address, username and password.
 Setup Domain Name System (DNS) A Record
 =======================================
 
-Historia requires a DNS name set to enabled SSL for your IPFS node that will be setup below. This is beyond the scope of this document, but there is plenty of documentation online on how to do this. Find a cheap DNS registrar and create a A record that points to the IP address of your VPS. Namecheap.com or GoDaddy.com are options for this. This can be any top level domain, such as .xyz ($0.88 annually) or .fun ($1.00 annually), so get this cheapest domain you can get. 
+Historia requires a DNS name set to enabled SSL for your IPFS node that will be setup below. This is beyond the scope of this document, but there is plenty of documentation online on how to do this. Find a cheap DNS registrar and create a A record that points to the IP address of your VPS. Namecheap.com or GoDaddy.com are options for this. This can be any top level domain, such as .xyz ($0.88 annually) or .fun ($1.00 annually), so get the cheapest domain you can get. 
 
 Remember that if you live in a oppressive country, your name will be associated with your DNS record in the global WHOIS database. Some DNS providers such as ionos.com will give a DNS name privacy for free with domain registration. But they would still be required to hand over your domain name information via court order. Another option is using one of the new blockchain DNS systems such as unstoppabledomains.com, and using crypto currency to purchase your domain name. However we have not tested using a blockchain DNS system yet.
 
@@ -200,7 +200,7 @@ Then you will see a notification that your Mastenode Has Been Queued for Setup, 
 
    Your masternode has been queued for setup.
 
-Once you click on the ok button, it will take you to the setup logs tab, where you can following the logs of what the Historia Local Web app is doing, as seen below. Your VPS is now being setup to become a masternode. You can now leave this page and go explore records or other areas of the Historia Local Web.
+Once you click on the ok button, it will take you to the setup logs tab, where you can follow the logs of what the Historia Local Web app is doing, as seen below. Your VPS is now being setup to become a masternode. You can now leave this page and go explore records or other areas of the Historia Local Web.
 
 .. figure:: ../img/amn13.png
    :width: 600px
