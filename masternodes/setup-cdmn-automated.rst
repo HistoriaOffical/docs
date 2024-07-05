@@ -226,7 +226,6 @@ After a few minutes, your masternode should be setup, and you will see two trans
 
 If you go to the Manage Masternodes & Voting Nodes, you will see that a new Masternode has been added to the screen. Your masternode has now been setup, and properly registered, and voting keys have been setup ready to vote.
 
-
 .. figure:: ../img/amn16.png
    :width: 600px
 
