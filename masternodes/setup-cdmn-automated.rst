@@ -230,7 +230,7 @@ If you go to the Manage Masternodes & Voting Nodes, you will see that a new Mast
 .. figure:: ../img/amn16.png
    :width: 600px
 
-   Now Unlock your wallet to send masternode registration commands to the Historia Network.
+  Masternode is now registered.
 
 
 
