@@ -34,6 +34,7 @@ a self-operated masternode.
 
    understanding.rst
    hosting.rst
+   setup-cdmn-automated.rst
    setup-cdmn.rst
    setup-win-cdmn.rst
 

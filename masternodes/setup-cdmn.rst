@@ -5,8 +5,10 @@
 .. _masternode-setup:
 
 ===================================================================
-Setup For Linux 
+Setup For Linux (Manual)
 ===================================================================
+
+Most users should follow the Setup For Linux (Automated) version of this guide, unless you are very techinical and want to know technical understanding of setting up a masternode.
 
 Setting up a masternode requires a basic understanding of Linux and blockchain technology, as well as an ability to follow instructions closely. It also requires regular maintenance and careful security. There are some decisions to be made along the way, and optional extra steps to take for increased security.
 
