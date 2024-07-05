@@ -127,7 +127,7 @@ Verify that the Historia Network Core wallet is fully synced. Once synchronizati
    Click the Open Historia Local Web (HLWA)
 
 
-preliminary Setup
+Preliminary Setup
 ----------------
 If the Historia Local Web application has not been started previously, you will need to complete the preliminary setup as shown in the following screenshots.
 
