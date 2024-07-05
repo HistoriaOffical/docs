@@ -5,7 +5,7 @@
 .. _masternode-setup:
 
 ===================================================================
-Setup For Linux 
+Setup For Linux via Web Interface.
 ===================================================================
 
 Setting up a masternode requires a basic understanding of Linux and blockchain technology, as well as an ability to follow instructions closely. It also requires regular maintenance and careful security. There are some decisions to be made along the way, and optional extra steps to take for increased security.
@@ -38,7 +38,7 @@ Masternode Info
 ---------------
 
 - Collateral Requirement: 5000 HTA
-- Reward: 50% per block - increaes 2.5% every 2 months until 50% per block
+- Reward: 50% per block 
 - Ports: TCP 10101, TCP 4001, TCP 443, TCP 80
 - IPFS Required: Yes
 - IPv4 address required
