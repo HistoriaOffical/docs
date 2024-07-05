@@ -121,34 +121,108 @@ Before you begin, ensure you have downloaded the latest version of the Historia 
 
 Verify that the Historia Network Core wallet is fully synced. Once synchronization is complete, navigate to the "Governance" tab. At the bottom of this screen, click the "Open Historia Local Web (HLWA)" button. This will launch the Historia Local Web application. 
 
+.. figure:: ../img/amn1.png
+   :width: 600px
+
+   Click the Open Historia Local Web (HLWA)
+
+
 Prelimiary Setup
 ----------------
 If the Historia Local Web application has not been started previously, you will need to complete the preliminary setup as shown in the following screenshots.
 
+.. figure:: ../img/amn2.png
+   :width: 600px
 
-Ubuntu 20.04 VPS Setup
-----------------------
-After completing the preliminary setup, navigate to the "Setup Masternodes" tab.
+   Choose if you are using high-speed internet or not.
 
-Enter your VPS SSH information for your Ubuntu VPS host as indicated below. This will include the SSH Server IP Address, SSH Server Port (default is 22), your DNS name from the previous step that has the A record pointing to the VPS IP Address, Server Username (root user), and the Server Password (password for the root user).
+.. figure:: ../img/amn3.png
+   :width: 600px
 
-After you enter in all of the required information, click the "Test Connection" button. The Historia Local Web application will then attempt to connect via SSH to your Ubuntu 20.04 VPS. 
+   If you choose the High Speed Internet, hit the ok button
 
-If your connection is successful, an alert will be popped up saying user is root, and you need to create a new user in the screenshot below.
+.. figure:: ../img/amn4.png
+   :width: 600px
 
-Create a new user for your VPS and enter a new password as seen in the screen shot below.
+   Hit OK and Choose Content Distribution Masternode
+
+.. figure:: ../img/amn5.png
+   :width: 600px
+
+   Click on the table to choose a masternode and then hit the "Test & Save IPFS Server"
+
+.. figure:: ../img/amn6.png
+   :width: 600px
+
+   This masternode is up and available. Hit the Save button.
+
+.. figure:: ../img/amn7.png
+   :width: 600px
+
+   Prelimiary Setup is complete, now you can hit the Ok button.
+
+After the prelimiary setup is complete, you can now proceed to the Automated Ubuntu 20.04 VPS Setup below.
+
+Automated Ubuntu 20.04 VPS Setup
+---------------------------------
+After completing the preliminary setup, we have to complete the setup of the Masternode configuration. Navigate to the "Setup Masternodes" tab.
+
+.. figure:: ../img/amn8.png
+   :width: 600px
+
+   Setup Masternodes tab. 
+
+Enter your VPS SSH information for your Ubuntu VPS host as indicated below. This will include the SSH Server IP Address, SSH Server Port (default is 22), your DNS name from the previous step that has the A record pointing to the VPS IP Address, Server Username (root user), and the Server Password (password for the root user), As seen below:
+
+.. figure:: ../img/amn9.png
+   :width: 600px
+
+   Enter SSH Connection Information 
+
+After you enter in all of the required information, click the "Test Connection" button. The Historia Local Web application will then attempt to connect via SSH to your Ubuntu 20.04 VPS. If your connection is successful, an alert will be popped up saying user is root, and you need to create a new user. Create a new user for your VPS and enter a new password as seen in the screen shot below.
+
+.. figure:: ../img/amn10.png
+   :width: 600px
+
+   Create New User for Historia
 
 If it's successfully, you will get a Success message as seen below.
 
+.. figure:: ../img/amn11.png
+   :width: 600px
+
+   Successfully created New User for Historia
+
 Then you will see a notification that your Mastenode Has Been Queued for Setup, as seen in the screenshot below.
 
+.. figure:: ../img/amn12.png
+   :width: 600px
+
+   Your masternode has been queued for setup.
+
 Once you click on the ok button, it will take you to the setup logs tab, where you can following the logs of what the Historia Local Web app is doing, as seen below. Your VPS is now being setup to become a masternode. You can now leave this page and go explore records or other areas of the Historia Local Web.
+
+.. figure:: ../img/amn13.png
+   :width: 600px
+
+   Setup Logs showing progress.
+
 
 Masternode Registration
 -----------------------
 After about 30 minutes or so, come back and check the Settings -> Setup Masternodes -> Setup Logs page, and you will see a new button saying "Unlock Wallet". Once you see this, your masternode has been setup, and the final registration process is ready to start. Click the "Unlock Wallet" button, and enter your wallet password in the prompt.
 
-After a few minutes, your masternode should be setup, and you will see some transactions in your wallet transactions, as seen below.
+.. figure:: ../img/amn14.png
+   :width: 600px
+
+   Now Unlock your wallet to send masternode registration commands to the Historia Network.
+
+After a few minutes, your masternode should be setup, and you will see two transactions in your wallet transactions to yourself, as seen below.
+
+.. figure:: ../img/amn14.png
+   :width: 600px
+
+   Now Unlock your wallet to send masternode registration commands to the Historia Network.
 
 If you go to the Manage Masternodes & Voting Nodes, you will see that a new Masternode has been added to the screen. Your masternode has now been setup, and properly registered, and voting keys have been setup ready to vote.
 
