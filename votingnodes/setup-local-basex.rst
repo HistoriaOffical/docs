@@ -10,13 +10,6 @@ Setup the Historica Local Web Application
 
 Setting up a Historica Local Web App requires a basic understanding of how to use a computer, as well as an ability to follow instructions closely. 
 
-.. raw:: html
-
-   <div style="position: relative; padding-bottom: 56.25%; height: 0; margin-bottom: 2em; overflow: hidden; max-width: 100%; height: auto;">
-      <iframe src="https://www.youtube.com/embed/n5aHiWuJI78" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-
-   </div>
-
 Before you begin
 ================
 
