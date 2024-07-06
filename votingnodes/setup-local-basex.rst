@@ -15,7 +15,7 @@ Before you begin
 
 This guide assumes you have already setup your voting node. You will need:
 
-- Historia Core Wallet v0.17.3.0 or later to store your Historia. You can get this `here <https://github.com/HistoriaOffical/historia/releases/tag/0.17.0.4>`_.
+- Historia Core Wallet v0.17.3.0 or later to store your Historia. You can get this `here <https://github.com/HistoriaOffical/historia/releases>`_.
 - A computer running Windows, MacOS, or Linux. 
 
 In this guide, we will assume you will be working from a Windows computer. However, alternative steps for using MacOS or Linux will be indicated where necessary.
