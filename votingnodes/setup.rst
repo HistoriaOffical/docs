@@ -158,7 +158,7 @@ Revoke Voting Keys
 -----------------
 If you no longer want to have voting privileges and have the ability to move your coins. Click the Revoke Voting Node action, and enter your wallet passphrase.
 
-.. figure:: ../img/anv25.png
+.. figure:: ../img/avn25.png
    :width: 300px
 
    Revoke Masternode Confirmation Dialog
