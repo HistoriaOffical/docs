@@ -27,7 +27,7 @@ time. You will need:
 
 - 100 HTA.
 - A little extra HTA for registration transactions: 1-5 HTA
-- Historia Core Wallet v0.17.0.4 or later to store your Historia. You can get this here https://github.com/HistoriaOffical/historia/releases/
+- Historia Core Wallet v0.17.3.0 or later to store your Historia. You can get this here https://github.com/HistoriaOffical/historia/releases/
 - A computer running Windows, MacOS, or Linux.
 
 In this guide, we will assume you will be working from a Windows computer. However, alternative steps for using MacOS or Linux will be indicated where necessary.
@@ -41,7 +41,7 @@ The Historia developers have tried to make this process as simple as possible fo
    - Collateral Requirement: 100 HTA
    - A little extra HTA for registration transactions: 1-5 HTA 
    - Internet access on home network.
-   - A computer running Windows or Linux. MacOS coming soon.
+   - A computer running Windows, Linux. or MacOS
 
 In this guide, we will setup a Voting Node with collateral of 100. If you are looking to setup a Content Distribution Masternode with collateral of 5000 please see the appropriate guide for that.
 
@@ -131,13 +131,6 @@ Enter your Wallet passphrase into the prompt
    :width: 600px
 
    Now Unlock your wallet to send voting node registration commands to the Historia Network.
-
-Then you will see a notification that your Voting Node Has Been Queued for Setup, as seen in the screenshot below.
-
-.. figure:: ../img/avn3.png
-   :width: 300px
-
-   Your voting has been queued for setup.
 
 Then you will see a notification that your Voting Node Has Been Queued for Setup, as seen in the screenshot below.
 
