@@ -139,13 +139,6 @@ Then you will see a notification that your Voting Node Has Been Queued for Setup
 
    Your voting has been queued for setup.
 
-Then you will see a notification that your Voting Node Has Been Queued for Setup, as seen in the screenshot below.
-
-.. figure:: ../img/avn3.png
-   :width: 300px
-
-   Your voting has been queued for setup.
-
 After about 1 hour, your voting node should be setup.
 
 .. figure:: ../img/avn4.png
