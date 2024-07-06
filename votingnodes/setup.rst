@@ -57,7 +57,7 @@ selecting **File > Backup Wallet**. Save the file to a secure location
 physically separate to your computer, since this will be the only way
 you can access our funds if anything happens to your computer.
 
-Setup your Masternode via the Historia Local Web application (HLWA)
+Setup your Voting Node via the Historia Local Web application (HLWA)
 ===================================================================
 The Historia Network Core wallet now includes full integration of the Historia Local Web application. This application facilitates the automation of voting node setup, providing all necessary functionality to streamline the process.
 
