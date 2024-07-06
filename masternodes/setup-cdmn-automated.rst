@@ -231,11 +231,72 @@ If you go to the Manage Masternodes & Voting Nodes, you will see that a new Mast
 
    Your Masternode is now registered, running, and voting keys are setup.
 
+Trouble Shooting
+----------------
+
+If your masternode is in the POSE_BANNED state, you will no longer receive rewards for running it. In the Historia Local Web app, the Manage Masternodes & Voting Nodes tab offers several action functions to help diagnose and resolve the issue.
+
+In the actions area, you will find several icons. Hover over each icon for information about its function. The functions for masternodes, from left to right, are as follows:
+
+- Information: Displays your node's information and allows you to update certain details.
+- Diagnose: Attempts to identify potential problems with your masternode.
+- Restart Masternode: Sends a request to the network to restart your masternode and attempt to resolve the POSE_BANNED state.
+- Revoke Masternode: Allows you to stop running a masternode, unlocking your coins so you can move them.
+
+.. figure:: ../img/amn17.png
+   :width: 600px
+
+   Actions Menu
 
 
+The following screen shot is from the Masternode Information action. As you can see you have all of the information about your masternode. You can also update certain fields such as the Fee Source Address, BLS Private Key, BLS Public Key. If you setup your Masternode using the Historia Local Web app, then these fields will already be filled for you. If you set them up using some other manner, then you will have to add these values before you can Restart or Revoke your masternode
+
+.. figure:: ../img/amn18.png
+   :width: 600px
+
+   Masternode Information Dialog
+
+The following screen shot is from the Diagnosis Tools action. First you need to enter in your username and password of the server. This is not the root user, but rather the username that historia is running under.
+
+.. figure:: ../img/amn19.png
+   :width: 600px
+
+   Diagnosis Tools Dialog
+
+After you enter in your username and password, click the Test Connection button. If the connection is successful, you will next see this screen. Click Run Diagnosis button.
+
+.. figure:: ../img/amn20.png
+   :width: 600px
+
+   Run Diagnosis Dialog
+
+Historia Local Web will attempt to diagnose common issues that your masternode might have. In this screen shot below, all issues have been resolved. You can also view the logs for further information.
+
+.. figure:: ../img/amn21.png
+   :width: 600px
+
+   Diagnosis Complete Dialog
+
+After you have solved any potential issues, you can attempt to the Restart Masternode action. You have to enter your wallet passphrase to restart your masternode. If you setup your Masternode using the Historia Local Web app, then all information to restart is already ready to attempt to restart. If you set them up using some other manner, then you will have to add Fee Source Address, BLS Private Key, BLS Public Key in the Information Action.
+
+.. figure:: ../img/amn22.png
+   :width: 600px
+
+   Restart Masternode Dialog
+
+After you click the Attempt to Restart button, you should see this dialog. If something went wrong, you will receive a different error message.
+
+.. figure:: ../img/amn23.png
+   :width: 600px
+
+   Restart Masternode Confirmation Dialog
 
 
+Revoke Masternode
+-----------------
+If you no longer want to run a masternode and have the ability to move your coins. Click the Revoke Masternode action, and enter your wallet passphrase.
 
+.. figure:: ../img/amn24.png
+   :width: 600px
 
-
-
+   Revoke Masternode Confirmation Dialog
