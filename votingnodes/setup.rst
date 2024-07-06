@@ -41,7 +41,7 @@ The Historia developers have tried to make this process as simple as possible fo
    - Collateral Requirement: 100 HTA
    - A little extra HTA for registration transactions: 1-5 HTA 
    - Internet access on home network.
-   - A computer running Windows or Linux. MacOS coming soon.
+   - A computer running Windows, Linux. or MacOS
 
 In this guide, we will setup a Voting Node with collateral of 100. If you are looking to setup a Content Distribution Masternode with collateral of 5000 please see the appropriate guide for that.
 
