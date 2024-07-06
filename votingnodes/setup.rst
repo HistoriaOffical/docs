@@ -152,3 +152,13 @@ If you go to the Manage Masternodes & Voting Nodes, you will see that a new Voti
    :width: 600px
 
    Your Voting Node is now registered, running, and voting keys are setup.
+
+
+Revoke Voting Keys
+-----------------
+If you no longer want to have voting privileges and have the ability to move your coins. Click the Revoke Voting Node action, and enter your wallet passphrase.
+
+.. figure:: ../img/anv25.png
+   :width: 300px
+
+   Revoke Masternode Confirmation Dialog
