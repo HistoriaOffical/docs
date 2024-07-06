@@ -50,6 +50,20 @@ In this guide, we will setup a Content Distribution Masternode (CDMN) with colla
 
 .. _vps-setup:
 
+Encrypt And Backup Your Wallet
+==============================
+
+The first step is to secure your wallet (if you have not already done so). 
+First, encrypt the wallet by selecting 
+**Settings > Encrypt wallet**. You should use a strong, new password
+that you have never used somewhere else. Take note of your password and
+store it somewhere safe or you will be permanently locked out of your
+wallet and lose access to your funds. Next, back up your wallet file by
+selecting **File > Backup Wallet**. Save the file to a secure location
+physically separate to your computer, since this will be the only way
+you can access our funds if anything happens to your computer.
+
+
 Set up your VPS
 ===============
 
