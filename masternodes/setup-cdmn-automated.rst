@@ -21,10 +21,10 @@ time. You will need:
 - A Linux server, preferably a Virtual Private Server (VPS).
 - IPv4 address
 - Your own DNS name
-- VPS running Ubuntu 20.04
+- Fresh Install of Ubuntu 20.04 VPS (This is a hard requirement)
 
 
-We also assume you will be working from a Windows computer. However, since most of the work is done on your Linux VPS, alternative steps for using macOS or Linux will be indicated where necessary.
+We also assume you will be working from a Windows computer. However, since most of the work is done on your Ubuntu VPS.
 
 Masternode Info
 ---------------
@@ -35,7 +35,7 @@ Masternode Info
 - IPFS Required: Yes
 - IPv4 address required
 - DNS name
-- VPS running Ubuntu 20.04
+- VPS running Ubuntu 20.04 
 
 In this guide, we will setup a Content Distribution Masternode (CDMN) with collateral of 5000. 
 
@@ -52,7 +52,7 @@ store it somewhere safe or you will be permanently locked out of your
 wallet and lose access to your funds. Next, back up your wallet file by
 selecting **File > Backup Wallet**. Save the file to a secure location
 physically separate to your computer, since this will be the only way
-you can access our funds if anything happens to your computer.
+you can access our funds if anything happens to your computer. If you don't do this, your masternode install will fail.
 
 
 Set up your VPS
@@ -239,6 +239,17 @@ If you go to the Manage Masternodes & Voting Nodes, you will see that a new Mast
 Trouble Shooting
 ----------------
 
+Install Problems
+^^^^^^^^^^^^^^^^
+The Historia team has endeavored to simplify the setup process for users. However, due to various factors, issues may occasionally arise. If, upon completing the installation, you do not see your masternode in the Manage Masternodes & Voting Nodes tab, the Historia Core Wallet, or the Masternode listings in HLWA, it indicates an issue has occurred. In such cases, we recommend reinstalling the Ubuntu 20.04 node and starting the process anew. Future updates will aim to enhance this process, allowing the Historia Local Web to automatically address any installation issues, reducing the need for a complete reinstall. 
+
+Before starting over, reach out to us in Discord or Telegram, send us your log files from the Setup Log tab in the Historia Local Web, and let us try to figure out your problem. Alternatively you can submit a bug report here:
+https://github.com/HistoriaOffical/Historia-Local-Web-Application/issues
+
+If submitting bug reports, please provide the log files mentioned above, as well as much info as you can provide about your setup.
+
+POSE_BANNED State
+^^^^^^^^^^^^^^^^^
 If your masternode is in the POSE_BANNED state, you will no longer receive rewards for running it. In the Historia Local Web app, the Manage Masternodes & Voting Nodes tab offers several action functions to help diagnose and resolve the issue.
 
 In the actions area, you will find several icons. Hover over each icon for information about its function. The functions for masternodes, from left to right, are as follows:
@@ -298,7 +309,7 @@ After you click the Attempt to Restart button, you should see this dialog. If so
 
 
 Revoke Masternode
------------------
+^^^^^^^^^^^^^^^^^
 If you no longer want to run a masternode and have the ability to move your coins. Click the Revoke Masternode action, and enter your wallet passphrase.
 
 .. figure:: ../img/amn24.png
