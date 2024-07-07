@@ -5,24 +5,19 @@
 .. _basex-setup:
 
 ==========================================
-Using the Web App or Local Web App for Voting
+Using the Web App Voting
 ==========================================
 
-Setting up Web App or Local Web App with your voting keys requires a basic understanding of how to use Historia GUI Wallet and a website.
+Setting up Web App with your voting keys requires a basic understanding of how to use Historia GUI Wallet and a website.
 
 https://historia.network/
 
-.. raw:: html
-
-   <div style="position: relative; padding-bottom: 56.25%; height: 0; margin-bottom: 2em; overflow: hidden; max-width: 100%; height: auto;">
-      <iframe src="https://www.youtube.com/embed/Cw-fNbBXs48" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-   </div>
-
+The Historia Local Web app now does all of this for you, making it easier than ever to setup your voting node.
 
 Before you begin
 ================
 
-This guide assumes you are setting up your voting keys on Web App or Local Web App. This assumes that you have already setup your masternode or voting node previously. If you have not setup your masternode or voting node, please do that before you use this guide.
+This guide assumes you are setting up your voting keys on Web App. This assumes that you have already setup your masternode or voting node previously. If you have not setup your masternode or voting node, please do that before you use this guide.
 
 
 Get Your Voting Private Key
@@ -74,7 +69,7 @@ Output: ::
 Add your voting address private key to Web App or Local Web App
 ---------------------------------------------------------------
 
-After you have registered your user on Web App (https://historia.network/). Note: If you are using the Historia Local Web App you do not need to register an account. 
+After you have registered your user on Web App (https://historia.network/). 
 
 Login to the Web App application and go to Masternodes->My Masternode, as seen below.
 
