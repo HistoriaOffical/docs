@@ -5,14 +5,14 @@
 .. _basex-setup:
 
 ==========================================
-Using the Web App Voting
+Using the Web App for Voting
 ==========================================
 
 Setting up Web App with your voting keys requires a basic understanding of how to use Historia GUI Wallet and a website.
 
 https://historia.network/
 
-The Historia Local Web app now does all of this for you, making it easier than ever to setup your voting node.
+The Historia Local Web app now does all of this for you, making it easier than ever to setup your voting keys.
 
 Before you begin
 ================
